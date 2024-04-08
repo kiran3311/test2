@@ -1,0 +1,2860 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='EEEE, MMMM dd, yyyy, hh:mm a '('zzz')''/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent dark default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+				<li class='waves-effect'><a href='#!' view='author-view' onclick="configureView(3)"><i class='material-icons'>person</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>PSB CKYC Test Report</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='error'><a href='#!'>Error <i class='material-icons red-text lighten-2'>error</i></a></li>
+						<li status='warning'><a href='#!'>Warning <i class='material-icons orange-text'>warning</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>NewdumpUploadandProcess</a></li>
+					<li><a href='#'>UploadResponse</a></li>
+					<li><a href='#'>PendingCustReport</a></li>
+					<li><a href='#'>CKYCIdGeneratedReport</a></li>
+					<li><a href='#'>Report</a></li>
+					<li><a href='#'>DetailSearch</a></li>
+					<li><a href='#'>sanity</a></li>
+					<li><a href='#'>CheckDraftCust</a></li>
+					<li><a href='#'>SearchandDownload</a></li>
+					<li><a href='#'>MultiSearch</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='74.074%'><span class='strong'>20</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='7.407%'>2</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='18.519%'>5</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='25.773%'><span class='strong'>25</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='4.124%'>4</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='70.103%'>68</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>loginCentralUser</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+16ms</span>
+</div>
+	<div class='test-desc'>Trying to logedIn with central user </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>NewdumpUploadandProcess</span>
+				<span class='category label white-text'>UploadResponse</span>
+				<span class='category label white-text'>PendingCustReport</span>
+				<span class='category label white-text'>CKYCIdGeneratedReport</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:07 PM</td>
+					<td class='step-details'>Central User LoggedIn</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:01:07 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-01-07.png' width='10%' src='liveScreenshot\2024-01-16 03-01-07.png' data-src='liveScreenshot\2024-01-16 03-01-07.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  warning' status='warning' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>uploadDumpFile</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+						<span class='test-status right warning'>warning</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+286ms</span>
+</div>
+	<div class='test-desc'>Validate CBS Dump file upload functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>NewdumpUploadandProcess</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:08 PM</td>
+					<td class='step-details'>Page Title : CBS Dump List</td>
+				</tr>
+				<tr class='log' status='warning'>
+					<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+					<td class='timestamp'>3:01:13 PM</td>
+					<td class='step-details'>Dump File already exists. Upload new file.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:01:15 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-01-14.png' width='10%' src='liveScreenshot\2024-01-16 03-01-14.png' data-src='liveScreenshot\2024-01-16 03-01-14.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>generateCkycBulkFile</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+718ms</span>
+</div>
+	<div class='test-desc'>Validate functionality of generating CKYC Bulk file </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>NewdumpUploadandProcess</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:18 PM</td>
+					<td class='step-details'>Page Title : ExportBulkFileList</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:20 PM</td>
+					<td class='step-details'>CKYC Bulk File export failed - No records to export.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:01:22 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-01-21.png' width='10%' src='liveScreenshot\2024-01-16 03-01-21.png' data-src='liveScreenshot\2024-01-16 03-01-21.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>uploadCkycResponce</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+272ms</span>
+</div>
+	<div class='test-desc'>Validating CKYC Response file upload functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>UploadResponse</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:22 PM</td>
+					<td class='step-details'>Page Title : Response File List</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:25 PM</td>
+					<td class='step-details'>Response File already exists. Upload new file.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:01:27 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-01-26.png' width='10%' src='liveScreenshot\2024-01-16 03-01-26.png' data-src='liveScreenshot\2024-01-16 03-01-26.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  error' status='error' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>ckycIdGeneretedReport</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+						<span class='test-status right error'>error</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+507ms</span>
+</div>
+	<div class='test-desc'>Validating Functionality of generating report for CKYC ID generated customer </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>CKYCIdGeneratedReport</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:27 PM</td>
+					<td class='step-details'>CKYC ID Grnerate Report Test Start</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:28 PM</td>
+					<td class='step-details'>Page Title : CkycGeneratedExport</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:29 PM</td>
+					<td class='step-details'>Start Date Selected : 15 Aug 2023</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:29 PM</td>
+					<td class='step-details'>End Date Selected as :1 Dec 2023</td>
+				</tr>
+				<tr class='log' status='error'>
+					<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+					<td class='timestamp'>3:01:32 PM</td>
+					<td class='step-details'>CKYC Generated ID End date should be greater than Start date</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:36 PM</td>
+					<td class='step-details'>CKYC Generated ID Please Enter To Created Date</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:01:38 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-01-33.png' width='10%' src='liveScreenshot\2024-01-16 03-01-33.png' data-src='liveScreenshot\2024-01-16 03-01-33.png'></li>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-01-37.png' width='10%' src='liveScreenshot\2024-01-16 03-01-37.png' data-src='liveScreenshot\2024-01-16 03-01-37.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>gernerateCBSImportErrorReport</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+349ms</span>
+</div>
+	<div class='test-desc'>Validate CBS Import Error report generation functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Report</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:38 PM</td>
+					<td class='step-details'>GeneratingCBS Import report test start</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:41 PM</td>
+					<td class='step-details'>Page Title : RegionalWiseCBSImportErrorResponseReport</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:01:41 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-01-40.png' width='10%' src='liveScreenshot\2024-01-16 03-01-40.png' data-src='liveScreenshot\2024-01-16 03-01-40.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>gernerateDraftSaveReport</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+140ms</span>
+</div>
+	<div class='test-desc'>Validate Draft Save report generation functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Report</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:41 PM</td>
+					<td class='step-details'>Generating Draft Save report test start</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:45 PM</td>
+					<td class='step-details'>Page Title : RegionalWisePendingReport</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:01:45 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-01-44.png' width='10%' src='liveScreenshot\2024-01-16 03-01-44.png' data-src='liveScreenshot\2024-01-16 03-01-44.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>gernerateImageUploadPendingReport</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+317ms</span>
+</div>
+	<div class='test-desc'>Validate Image Upload Pending report generation functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Report</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:45 PM</td>
+					<td class='step-details'>Generating Image Upload Pending report test start</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:48 PM</td>
+					<td class='step-details'>Page Title : RegionalWisePendingReport</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:01:48 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-01-47.png' width='10%' src='liveScreenshot\2024-01-16 03-01-47.png' data-src='liveScreenshot\2024-01-16 03-01-47.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>gerneratePendingCheckerApprovalReport</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+363ms</span>
+</div>
+	<div class='test-desc'>Validate Pending checker Approval report generation functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Report</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:48 PM</td>
+					<td class='step-details'>Generating Pending checker Approval report test start</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:52 PM</td>
+					<td class='step-details'>Page Title : RegionalWisePendingReport</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:01:52 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-01-51.png' width='10%' src='liveScreenshot\2024-01-16 03-01-51.png' data-src='liveScreenshot\2024-01-16 03-01-51.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>gernerateRejectedByCheckerReport</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+953ms</span>
+</div>
+	<div class='test-desc'>Validate Rejected By Checker report generation functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Report</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:52 PM</td>
+					<td class='step-details'>Generating Rejected By Checker report test start</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:55 PM</td>
+					<td class='step-details'>Page Title : RegionalWiseRejectedResponseReport</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:01:55 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-01-54.png' width='10%' src='liveScreenshot\2024-01-16 03-01-54.png' data-src='liveScreenshot\2024-01-16 03-01-54.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>gernerateApprovedByCheckerReport</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+945ms</span>
+</div>
+	<div class='test-desc'>Validate Approved By Checker report generation functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Report</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:55 PM</td>
+					<td class='step-details'>Generating Approved By Checker report test start</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:58 PM</td>
+					<td class='step-details'>Page Title : RegionalWisePendingReport</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:01:58 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-01-57.png' width='10%' src='liveScreenshot\2024-01-16 03-01-57.png' data-src='liveScreenshot\2024-01-16 03-01-57.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>gernerateBulkFileGeneratedReport</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:01 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+844ms</span>
+</div>
+	<div class='test-desc'>Validate Bulk File Generated report generation functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Report</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:58 PM</td>
+					<td class='step-details'>Generating Bulk File Generated report test start</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:01 PM</td>
+					<td class='step-details'>Page Title : RegionalWisePendingReport</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:02:01 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-00.png' width='10%' src='liveScreenshot\2024-01-16 03-02-00.png' data-src='liveScreenshot\2024-01-16 03-02-00.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>gernerateFiReconcilationPendingReport</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+759ms</span>
+</div>
+	<div class='test-desc'>Validate FI Reconcilation Pending report generation functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Report</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:01 PM</td>
+					<td class='step-details'>Generating FI Reconcilation Pending report test start</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:04 PM</td>
+					<td class='step-details'>Page Title : RegionalWiseFIReconResponseReport</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:02:04 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-03.png' width='10%' src='liveScreenshot\2024-01-16 03-02-03.png' data-src='liveScreenshot\2024-01-16 03-02-03.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>gernerateUploadedToCkycPortalReport</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+383ms</span>
+</div>
+	<div class='test-desc'>Validate Uploaded to CKYC Portal report generation functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Report</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:04 PM</td>
+					<td class='step-details'>Generating Uploaded to CKYC Portal report test start</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>3:02:08 PM</td>
+					<td class='step-details'>The resource cannot be found.</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>3:02:08 PM</td>
+					<td class='step-details'><pre>java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.fail(Assert.java:115)
+	at CKYC.ICICI.CentralUser.reportUploadedToCkycPortal(CentralUser.java:1113)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-06.png' width='10%' src='liveScreenshot\2024-01-16 03-02-06.png' data-src='liveScreenshot\2024-01-16 03-02-06.png'></li>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-07.png' width='10%' src='liveScreenshot\2024-01-16 03-02-07.png' data-src='liveScreenshot\2024-01-16 03-02-07.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>gernerateCkycIdExistingReport</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+712ms</span>
+</div>
+	<div class='test-desc'>Validate CKYC ID existing report generation functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Report</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:09 PM</td>
+					<td class='step-details'>Generating CKYC ID existing report test start</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:11 PM</td>
+					<td class='step-details'>Page Title : RegionalWiseCkycIDReport</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:02:11 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-11.png' width='10%' src='liveScreenshot\2024-01-16 03-02-11.png' data-src='liveScreenshot\2024-01-16 03-02-11.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>gernerateRjectedCkycPortalReport</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+772ms</span>
+</div>
+	<div class='test-desc'>Validate Rejected CKYC Portal report generation functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Report</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:12 PM</td>
+					<td class='step-details'>Generating  Rejected CKYC Portal report test start</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:14 PM</td>
+					<td class='step-details'>Page Title : RegionalWiseRejectedResponseReport</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:02:14 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-14.png' width='10%' src='liveScreenshot\2024-01-16 03-02-14.png' data-src='liveScreenshot\2024-01-16 03-02-14.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>gernerateStageOneResponceReport</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+102ms</span>
+</div>
+	<div class='test-desc'>Validate Stage One Responce report generation functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Report</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:15 PM</td>
+					<td class='step-details'>Generating  Stage One Responce report test start</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:18 PM</td>
+					<td class='step-details'>Page Title : RegionalWiseStageOneResponseReport</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:02:18 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-17.png' width='10%' src='liveScreenshot\2024-01-16 03-02-17.png' data-src='liveScreenshot\2024-01-16 03-02-17.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>gernerateCkycIdGeneratedReport</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+780ms</span>
+</div>
+	<div class='test-desc'>Validate CKYC ID Generated report generation functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Report</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:18 PM</td>
+					<td class='step-details'>Generating CKYC ID Generated report test start</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:21 PM</td>
+					<td class='step-details'>Page Title : RegionalWiseCkycIDReport</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:02:21 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-20.png' width='10%' src='liveScreenshot\2024-01-16 03-02-20.png' data-src='liveScreenshot\2024-01-16 03-02-20.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>gernerateFiReconResponseReport</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+810ms</span>
+</div>
+	<div class='test-desc'>Validate FI Recon Response report generation functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Report</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:21 PM</td>
+					<td class='step-details'>Generating FI Recon Response report test start</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:24 PM</td>
+					<td class='step-details'>Page Title : RegionalWiseFIReconResponseReport</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:02:24 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-23.png' width='10%' src='liveScreenshot\2024-01-16 03-02-23.png' data-src='liveScreenshot\2024-01-16 03-02-23.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>gernerateCKYCIDSuccessfullyUpdatedReport</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+880ms</span>
+</div>
+	<div class='test-desc'>Validate CKYC ID Successfully Updated report generation functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Report</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:24 PM</td>
+					<td class='step-details'>Generating CKYC ID Successfully Updated report test start</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:27 PM</td>
+					<td class='step-details'>Page Title : RegionalWiseCkycIDReport</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:02:27 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-26.png' width='10%' src='liveScreenshot\2024-01-16 03-02-26.png' data-src='liveScreenshot\2024-01-16 03-02-26.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  error' status='error' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>SearchdetailrecordwithcustomerID</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+						<span class='test-status right error'>error</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+588ms</span>
+</div>
+	<div class='test-desc'>Validate if user able to search detail record with customer ID </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>DetailSearch</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:27 PM</td>
+					<td class='step-details'>Page Title : Customer Record Detail Report</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:27 PM</td>
+					<td class='step-details'>Searching Detail Record for 3213321321321</td>
+				</tr>
+				<tr class='log' status='error'>
+					<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+					<td class='timestamp'>3:02:30 PM</td>
+					<td class='step-details'>CustomerID does not Exist</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:02:31 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-28.png' width='10%' src='liveScreenshot\2024-01-16 03-02-28.png' data-src='liveScreenshot\2024-01-16 03-02-28.png'></li>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-31.png' width='10%' src='liveScreenshot\2024-01-16 03-02-31.png' data-src='liveScreenshot\2024-01-16 03-02-31.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>helpTab</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+933ms</span>
+</div>
+	<div class='test-desc'>Validate Help Tab </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>sanity</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:31 PM</td>
+					<td class='step-details'>Checking Help tab</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>3:02:34 PM</td>
+					<td class='step-details'>The resource cannot be found.</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>3:02:34 PM</td>
+					<td class='step-details'><pre>java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.fail(Assert.java:115)
+	at CKYC.ICICI.CentralUser.helpTab(CentralUser.java:1690)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-33.png' width='10%' src='liveScreenshot\2024-01-16 03-02-33.png' data-src='liveScreenshot\2024-01-16 03-02-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>makerUserLogin</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+84ms</span>
+</div>
+	<div class='test-desc'>Trying to logged in with Maker User </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>CheckDraftCust</span>
+				<span class='category label white-text'>SearchandDownload</span>
+				<span class='category label white-text'>MultiSearch</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:37 PM</td>
+					<td class='step-details'>Maker User Logged in</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:02:37 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-36.png' width='10%' src='liveScreenshot\2024-01-16 03-02-36.png' data-src='liveScreenshot\2024-01-16 03-02-36.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>pendingCustomerDetails</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+392ms</span>
+</div>
+	<div class='test-desc'>Checking Total Number of Pending Customer </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>CheckDraftCust</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:38 PM</td>
+					<td class='step-details'>Total 11 Pending customer found for makers Entry</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:02:39 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-39.png' width='10%' src='liveScreenshot\2024-01-16 03-02-39.png' data-src='liveScreenshot\2024-01-16 03-02-39.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  error' status='error' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>pendingCustIsImgUpload</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+						<span class='test-status right error'>error</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:02 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:03 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 32s+498ms</span>
+</div>
+	<div class='test-desc'>Validating if pending customer images are uploaded or not for recent customer ID </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>CheckDraftCust</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:42 PM</td>
+					<td class='step-details'>Checking Personal details Link</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:43 PM</td>
+					<td class='step-details'>Checking Proof of identity Link</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:44 PM</td>
+					<td class='step-details'>Checking Proof of Address Link</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:45 PM</td>
+					<td class='step-details'>Checking Related person details Link</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:47 PM</td>
+					<td class='step-details'>Checking Other Details Link</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:48 PM</td>
+					<td class='step-details'>Checking Attestation Link</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:49 PM</td>
+					<td class='step-details'>Checking CKYC details Link</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:50 PM</td>
+					<td class='step-details'>Checking Upload Image Details Link</td>
+				</tr>
+				<tr class='log' status='error'>
+					<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+					<td class='timestamp'>3:03:10 PM</td>
+					<td class='step-details'>Images are not uploaded for recent customer</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:12 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-42.png' width='10%' src='liveScreenshot\2024-01-16 03-02-42.png' data-src='liveScreenshot\2024-01-16 03-02-42.png'></li>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-43.png' width='10%' src='liveScreenshot\2024-01-16 03-02-43.png' data-src='liveScreenshot\2024-01-16 03-02-43.png'></li>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-44.png' width='10%' src='liveScreenshot\2024-01-16 03-02-44.png' data-src='liveScreenshot\2024-01-16 03-02-44.png'></li>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-45.png' width='10%' src='liveScreenshot\2024-01-16 03-02-45.png' data-src='liveScreenshot\2024-01-16 03-02-45.png'></li>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-47.png' width='10%' src='liveScreenshot\2024-01-16 03-02-47.png' data-src='liveScreenshot\2024-01-16 03-02-47.png'></li>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-48.png' width='10%' src='liveScreenshot\2024-01-16 03-02-48.png' data-src='liveScreenshot\2024-01-16 03-02-48.png'></li>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-02-49.png' width='10%' src='liveScreenshot\2024-01-16 03-02-49.png' data-src='liveScreenshot\2024-01-16 03-02-49.png'></li>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-03-12.png' width='10%' src='liveScreenshot\2024-01-16 03-03-12.png' data-src='liveScreenshot\2024-01-16 03-03-12.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='26'>
+					<div class='test-heading'>
+						<span class='test-name'>Maker Login</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:03 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:03 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:03 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+460ms</span>
+</div>
+	<div class='test-desc'>Validate Maker user login functionality </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:03:13 PM</td>
+					<td class='step-details'>Maker User LoggedIn</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:14 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-03-14.png' width='10%' src='liveScreenshot\2024-01-16 03-03-14.png' data-src='liveScreenshot\2024-01-16 03-03-14.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  warning' status='warning' bdd='false' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>allSearchDownload</span>
+						<span class='test-time'>Tuesday, January 16, 2024, 03:03 PM (IST)</span>
+						<span class='test-status right warning'>warning</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Tuesday, January 16, 2024, 03:03 PM (IST)</span>
+	<span class='label end-time'>Tuesday, January 16, 2024, 03:03 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+811ms</span>
+</div>
+	<div class='test-desc'>Validate seach and download functionality with multiple input options </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>MultiSearch</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>KiranGangurde</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:03:14 PM</td>
+					<td class='step-details'>Multi search and download started</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:03:15 PM</td>
+					<td class='step-details'>Searching with Aadhar no</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:03:16 PM</td>
+					<td class='step-details'>Searching with PAN no</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:03:16 PM</td>
+					<td class='step-details'>Searching with VoterID</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:03:16 PM</td>
+					<td class='step-details'>Searching with PassportNO</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:03:16 PM</td>
+					<td class='step-details'>Searching with CKYCID</td>
+				</tr>
+				<tr class='log' status='warning'>
+					<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+					<td class='timestamp'>3:03:18 PM</td>
+					<td class='step-details'>Invalid Aadhaar Number</td>
+				</tr>
+				<tr class='log' status='warning'>
+					<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+					<td class='timestamp'>3:03:19 PM</td>
+					<td class='step-details'>Invalid PAN Number</td>
+				</tr>
+				<tr class='log' status='warning'>
+					<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+					<td class='timestamp'>3:03:21 PM</td>
+					<td class='step-details'>Invalid Passport Number</td>
+				</tr>
+				<tr class='log' status='warning'>
+					<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+					<td class='timestamp'>3:03:23 PM</td>
+					<td class='step-details'>Invalid CKYC Number</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:31 PM</td>
+					<td class='step-details'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='liveScreenshot\2024-01-16 03-03-31.png' width='10%' src='liveScreenshot\2024-01-16 03-03-31.png' data-src='liveScreenshot\2024-01-16 03-03-31.png'></li>
+							</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>NewdumpUploadandProcess</span>
+						<span class='category-status right'>
+							<span class='label pass'>2</span>
+							<span class='label others'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
+							
+							<span class='label yellow darken-2 white-text'>Others: 1</span>
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+										<td class='linked' test-id='1'>loginCentralUser</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+										<td class='linked' test-id='2'>uploadDumpFile</td>
+										<td><span class='test-status warning'>warning</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+										<td class='linked' test-id='3'>generateCkycBulkFile</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>UploadResponse</span>
+						<span class='category-status right'>
+							<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+										<td class='linked' test-id='1'>loginCentralUser</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+										<td class='linked' test-id='4'>uploadCkycResponce</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>PendingCustReport</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+										<td class='linked' test-id='1'>loginCentralUser</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>CKYCIdGeneratedReport</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+							<span class='label others'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							<span class='label yellow darken-2 white-text'>Others: 1</span>
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+										<td class='linked' test-id='1'>loginCentralUser</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+										<td class='linked' test-id='5'>ckycIdGeneretedReport</td>
+										<td><span class='test-status error'>error</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>Report</span>
+						<span class='category-status right'>
+							<span class='label pass'>14</span>
+							<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 14</span>
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+										<td class='linked' test-id='6'>gernerateCBSImportErrorReport</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+										<td class='linked' test-id='7'>gernerateDraftSaveReport</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+										<td class='linked' test-id='8'>gernerateImageUploadPendingReport</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+										<td class='linked' test-id='9'>gerneratePendingCheckerApprovalReport</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+										<td class='linked' test-id='10'>gernerateRejectedByCheckerReport</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+										<td class='linked' test-id='11'>gernerateApprovedByCheckerReport</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+										<td class='linked' test-id='12'>gernerateBulkFileGeneratedReport</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+										<td class='linked' test-id='13'>gernerateFiReconcilationPendingReport</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+										<td class='linked' test-id='14'>gernerateUploadedToCkycPortalReport</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+										<td class='linked' test-id='15'>gernerateCkycIdExistingReport</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+										<td class='linked' test-id='16'>gernerateRjectedCkycPortalReport</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+										<td class='linked' test-id='17'>gernerateStageOneResponceReport</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+										<td class='linked' test-id='18'>gernerateCkycIdGeneratedReport</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+										<td class='linked' test-id='19'>gernerateFiReconResponseReport</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+										<td class='linked' test-id='20'>gernerateCKYCIDSuccessfullyUpdatedReport</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>DetailSearch</span>
+						<span class='category-status right'>
+							<span class='label others'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							
+							<span class='label yellow darken-2 white-text'>Others: 1</span>
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+										<td class='linked' test-id='21'>SearchdetailrecordwithcustomerID</td>
+										<td><span class='test-status error'>error</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>sanity</span>
+						<span class='category-status right'>
+							<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+										<td class='linked' test-id='22'>helpTab</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>CheckDraftCust</span>
+						<span class='category-status right'>
+							<span class='label pass'>2</span>
+							<span class='label others'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
+							
+							<span class='label yellow darken-2 white-text'>Others: 1</span>
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+										<td class='linked' test-id='23'>makerUserLogin</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+										<td class='linked' test-id='24'>pendingCustomerDetails</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+										<td class='linked' test-id='25'>pendingCustIsImgUpload</td>
+										<td><span class='test-status error'>error</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>SearchandDownload</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+										<td class='linked' test-id='23'>makerUserLogin</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>MultiSearch</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+							<span class='label others'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							<span class='label yellow darken-2 white-text'>Others: 1</span>
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+										<td class='linked' test-id='23'>makerUserLogin</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Tuesday, January 16, 2024, 03:03 PM (IST)</td>
+										<td class='linked' test-id='27'>allSearchDownload</td>
+										<td><span class='test-status warning'>warning</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view -->
+<div id='author-view' class='view hide'>
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Authors' title='Search Authors'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Authors...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Authors</h5>
+                <ul id='author-collection' class='author-collection'>
+
+                        <li class='author displayed active'>
+                            <div class='author-heading'>
+                                <span class='author-name'>KiranGangurde</span>
+                                <span class='author-status right'>
+                                        <span class='label pass'>19</span>
+                                        <span class='label fail'>1</span>
+                                        <span class='label others'>5</span>
+						        </span>
+                            </div>
+                            <div class='author-content hide'>
+                                <div class='author-status-counts'>
+                                    <span class='label green accent-4 white-text'>Passed: 19</span>
+                                    <span class='label red lighten-1 white-text'>Failed: 1</span>
+                                    <span class='label yellow darken-2 white-text'>Others: 5</span>
+                                </div>
+
+                                <div class='author-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+                                                <td class='linked' test-id='1'>loginCentralUser</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+                                                <td class='linked' test-id='2'>uploadDumpFile</td>
+                                                <td><span class='test-status warning'>warning</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+                                                <td class='linked' test-id='3'>generateCkycBulkFile</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+                                                <td class='linked' test-id='4'>uploadCkycResponce</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+                                                <td class='linked' test-id='5'>ckycIdGeneretedReport</td>
+                                                <td><span class='test-status error'>error</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+                                                <td class='linked' test-id='6'>gernerateCBSImportErrorReport</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+                                                <td class='linked' test-id='7'>gernerateDraftSaveReport</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+                                                <td class='linked' test-id='8'>gernerateImageUploadPendingReport</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+                                                <td class='linked' test-id='9'>gerneratePendingCheckerApprovalReport</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+                                                <td class='linked' test-id='10'>gernerateRejectedByCheckerReport</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+                                                <td class='linked' test-id='11'>gernerateApprovedByCheckerReport</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:01 PM (IST)</td>
+                                                <td class='linked' test-id='12'>gernerateBulkFileGeneratedReport</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+                                                <td class='linked' test-id='13'>gernerateFiReconcilationPendingReport</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+                                                <td class='linked' test-id='14'>gernerateUploadedToCkycPortalReport</td>
+                                                <td><span class='test-status fail'>fail</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+                                                <td class='linked' test-id='15'>gernerateCkycIdExistingReport</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+                                                <td class='linked' test-id='16'>gernerateRjectedCkycPortalReport</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+                                                <td class='linked' test-id='17'>gernerateStageOneResponceReport</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+                                                <td class='linked' test-id='18'>gernerateCkycIdGeneratedReport</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+                                                <td class='linked' test-id='19'>gernerateFiReconResponseReport</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+                                                <td class='linked' test-id='20'>gernerateCKYCIDSuccessfullyUpdatedReport</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+                                                <td class='linked' test-id='21'>SearchdetailrecordwithcustomerID</td>
+                                                <td><span class='test-status error'>error</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+                                                <td class='linked' test-id='23'>makerUserLogin</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+                                                <td class='linked' test-id='24'>pendingCustomerDetails</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+                                                <td class='linked' test-id='25'>pendingCustIsImgUpload</td>
+                                                <td><span class='test-status error'>error</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, January 16, 2024, 03:03 PM (IST)</td>
+                                                <td class='linked' test-id='27'>allSearchDownload</td>
+                                                <td><span class='test-status warning'>warning</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='author-name'></h5>
+        </div>
+    </div>
+</div>
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>java.lang.AssertionError</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+                                                        <td class='linked' test-id='14'>gernerateUploadedToCkycPortalReport</td>
+                                                        <td><pre><pre>java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.fail(Assert.java:115)
+	at CKYC.ICICI.CentralUser.reportUploadedToCkycPortal(CentralUser.java:1113)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Tuesday, January 16, 2024, 03:02 PM (IST)</td>
+                                                        <td class='linked' test-id='22'>helpTab</td>
+                                                        <td><pre><pre>java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.fail(Assert.java:115)
+	at CKYC.ICICI.CentralUser.helpTab(CentralUser.java:1690)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>27</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>97</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Tuesday, January 16, 2024, 03:01 PM (IST)</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Tuesday, January 16, 2024, 03:03 PM (IST)</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 2m 28s+495ms</div>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>NewdumpUploadandProcess</td>
+							<td>2</td>
+							<td>0</td>
+							<td>1</td>
+							<td>
+									66.667%
+							</td>
+						</tr>
+						<tr>
+							<td>UploadResponse</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>PendingCustReport</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>CKYCIdGeneratedReport</td>
+							<td>1</td>
+							<td>0</td>
+							<td>1</td>
+							<td>
+									50%
+							</td>
+						</tr>
+						<tr>
+							<td>Report</td>
+							<td>14</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									93.333%
+							</td>
+						</tr>
+						<tr>
+							<td>DetailSearch</td>
+							<td>0</td>
+							<td>0</td>
+							<td>1</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>sanity</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>CheckDraftCust</td>
+							<td>2</td>
+							<td>0</td>
+							<td>1</td>
+							<td>
+									66.667%
+							</td>
+						</tr>
+						<tr>
+							<td>SearchandDownload</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>MultiSearch</td>
+							<td>1</td>
+							<td>0</td>
+							<td>1</td>
+							<td>
+									50%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 20,
+				failParent: 2,
+				fatalParent: 0,
+				errorParent: 3,
+				warningParent: 2,
+				skipParent: 0,
+				exceptionsParent: 7,
+				
+				passChild: 25,
+				failChild: 4,
+				fatalChild: 0,
+				errorChild: 3,
+				warningChild: 5,
+				skipChild: 0,
+				infoChild: 60,
+				exceptionsChild: 12,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>

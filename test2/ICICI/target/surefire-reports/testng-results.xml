@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="10" total="37" passed="25" failed="2" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Test Start]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Browser Open]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Central user logged in successfully]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Dump file upload started]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Dump File already exists. Upload new file.]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - CKYC Bulk File Generate Test Started]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - CKYC Bulk File export failed - No records to export.]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - CKYC Responce upload started]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Response File already exists. Upload new file.]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - CKYC ID Grnerate Report Test Start]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - CKYC Generated ID End date should be greater than Start date]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - CKYC Generated ID Please Enter To Created Date]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating CBS Import Report]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating Draft Save Report]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating Draft Save Report]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - GeneratingPending checker Approval Report]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating Rejected By Checker Report]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating Approved By Checker Report]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating Bulk File Generated Report]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating FI Reconcilation Pending Report]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating Uploaded to CKYC Portal Report]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating CKYC ID existing Report]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating  Rejected CKYC Portal Report]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating  Stage One Responce Report]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating  CKYC ID Generated Report]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating  FI Recon Response Report]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating  CKYC ID Successfully Updated Report]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Maker User LoggedIn]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Checking Pending customer count]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Total 11 Pending customer found for makers Entry]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Checking images for recent pending customer]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Img not uploaded for select customer]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Maker User LoggedIn]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 -  Multi Search and Download Started]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Searching with Aadhar no]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Searching with PAN no]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Searching with VoterID]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Searching with PassportNO]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Searching with CKYCID]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Invalid Aadhaar Number]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Invalid PAN Number]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Invalid Passport Number]]>
+    </line>
+    <line>
+      <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Invalid CKYC Number]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2024-01-06T14:57:28 IST" name="Suite" finished-at="2024-01-06T15:02:16 IST" duration-ms="288719">
+    <groups>
+      <group name="Search and Download">
+        <method signature="MakerUser.makerUserLogin()[pri:0, instance:CKYC.ICICI.MakerUser@4ba302e0]" name="makerUserLogin" class="CKYC.ICICI.MakerUser"/>
+      </group> <!-- Search and Download -->
+      <group name="New dump Upload and Process">
+        <method signature="CentralUser.loginCentralUser()[pri:-1, instance:CKYC.ICICI.CentralUser@57ac5227]" name="loginCentralUser" class="CKYC.ICICI.CentralUser"/>
+        <method signature="CentralUser.uploadDumpFile()[pri:2, instance:CKYC.ICICI.CentralUser@57ac5227]" name="uploadDumpFile" class="CKYC.ICICI.CentralUser"/>
+        <method signature="CentralUser.generateCkycBulkFile()[pri:4, instance:CKYC.ICICI.CentralUser@57ac5227]" name="generateCkycBulkFile" class="CKYC.ICICI.CentralUser"/>
+      </group> <!-- New dump Upload and Process -->
+      <group name="CKYC Id Generated Report">
+        <method signature="CentralUser.loginCentralUser()[pri:-1, instance:CKYC.ICICI.CentralUser@57ac5227]" name="loginCentralUser" class="CKYC.ICICI.CentralUser"/>
+        <method signature="CentralUser.ckycIdGeneretedReport()[pri:6, instance:CKYC.ICICI.CentralUser@57ac5227]" name="ckycIdGeneretedReport" class="CKYC.ICICI.CentralUser"/>
+      </group> <!-- CKYC Id Generated Report -->
+      <group name="Upload Response">
+        <method signature="CentralUser.loginCentralUser()[pri:-1, instance:CKYC.ICICI.CentralUser@57ac5227]" name="loginCentralUser" class="CKYC.ICICI.CentralUser"/>
+        <method signature="CentralUser.uploadCkycResponce()[pri:5, instance:CKYC.ICICI.CentralUser@57ac5227]" name="uploadCkycResponce" class="CKYC.ICICI.CentralUser"/>
+      </group> <!-- Upload Response -->
+      <group name="Check Draft Cust">
+        <method signature="MakerUser.makerUserLogin()[pri:0, instance:CKYC.ICICI.MakerUser@4ba302e0]" name="makerUserLogin" class="CKYC.ICICI.MakerUser"/>
+        <method signature="MakerUser.pendingCustomerDetails()[pri:1, instance:CKYC.ICICI.MakerUser@4ba302e0]" name="pendingCustomerDetails" class="CKYC.ICICI.MakerUser"/>
+        <method signature="MakerUser.pendingCustIsImgUpload()[pri:2, instance:CKYC.ICICI.MakerUser@4ba302e0]" name="pendingCustIsImgUpload" class="CKYC.ICICI.MakerUser"/>
+      </group> <!-- Check Draft Cust -->
+      <group name="MultiSearch">
+        <method signature="MakerUser.makerUserLogin()[pri:0, instance:CKYC.ICICI.MakerUser@4ba302e0]" name="makerUserLogin" class="CKYC.ICICI.MakerUser"/>
+        <method signature="AllSearch.allSearchDownload()[pri:2, instance:CKYC.ICICI.AllSearch@e98770d]" name="allSearchDownload" class="CKYC.ICICI.AllSearch"/>
+      </group> <!-- MultiSearch -->
+      <group name="Pending Cust Report">
+        <method signature="CentralUser.loginCentralUser()[pri:-1, instance:CKYC.ICICI.CentralUser@57ac5227]" name="loginCentralUser" class="CKYC.ICICI.CentralUser"/>
+        <method signature="CentralUser.reportCBSImportError()[pri:7, instance:CKYC.ICICI.CentralUser@57ac5227]" name="reportCBSImportError" class="CKYC.ICICI.CentralUser"/>
+      </group> <!-- Pending Cust Report -->
+    </groups>
+    <test started-at="2024-01-06T14:57:28 IST" name="Test" finished-at="2024-01-06T15:02:16 IST" duration-ms="288719">
+      <class name="CKYC.ICICI.CentralUser">
+        <test-method signature="loginCentralUser()[pri:-1, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:57:28 IST" name="loginCentralUser" finished-at="2024-01-06T14:58:30 IST" duration-ms="61742" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Central user logged in successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginCentralUser -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:58:30 IST" name="getREsult" finished-at="2024-01-06T14:58:31 IST" duration-ms="921" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginCentralUser status=SUCCESS method=CentralUser.loginCentralUser()[pri:-1, instance:CKYC.ICICI.CentralUser@57ac5227] output=Sat Jan 06 14:56:52 IST 2024 - Central user logged in successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="uploadDumpFile()[pri:2, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:58:31 IST" name="uploadDumpFile" finished-at="2024-01-06T14:58:41 IST" duration-ms="9887" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Dump file upload started]]>
+            </line>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Dump File already exists. Upload new file.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- uploadDumpFile -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:58:41 IST" name="getREsult" finished-at="2024-01-06T14:58:41 IST" duration-ms="200" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=uploadDumpFile status=SUCCESS method=CentralUser.uploadDumpFile()[pri:2, instance:CKYC.ICICI.CentralUser@57ac5227] output=Sat Jan 06 14:56:52 IST 2024 - Dump file upload started]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="generateCkycBulkFile()[pri:4, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:58:41 IST" name="generateCkycBulkFile" finished-at="2024-01-06T14:58:52 IST" duration-ms="10743" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - CKYC Bulk File Generate Test Started]]>
+            </line>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - CKYC Bulk File export failed - No records to export.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- generateCkycBulkFile -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:58:52 IST" name="getREsult" finished-at="2024-01-06T14:58:52 IST" duration-ms="350" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=generateCkycBulkFile status=SUCCESS method=CentralUser.generateCkycBulkFile()[pri:4, instance:CKYC.ICICI.CentralUser@57ac5227] output=Sat Jan 06 14:56:52 IST 2024 - CKYC Bulk File Generate Test Started]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="uploadCkycResponce()[pri:5, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:58:52 IST" name="uploadCkycResponce" finished-at="2024-01-06T14:59:00 IST" duration-ms="8089" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - CKYC Responce upload started]]>
+            </line>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Response File already exists. Upload new file.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- uploadCkycResponce -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:59:00 IST" name="getREsult" finished-at="2024-01-06T14:59:01 IST" duration-ms="570" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=uploadCkycResponce status=SUCCESS method=CentralUser.uploadCkycResponce()[pri:5, instance:CKYC.ICICI.CentralUser@57ac5227] output=Sat Jan 06 14:56:52 IST 2024 - CKYC Responce upload started]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="ckycIdGeneretedReport()[pri:6, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:59:01 IST" name="ckycIdGeneretedReport" finished-at="2024-01-06T14:59:15 IST" duration-ms="14559" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - CKYC ID Grnerate Report Test Start]]>
+            </line>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - CKYC Generated ID End date should be greater than Start date]]>
+            </line>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - CKYC Generated ID Please Enter To Created Date]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ckycIdGeneretedReport -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:59:15 IST" name="getREsult" finished-at="2024-01-06T14:59:16 IST" duration-ms="460" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ckycIdGeneretedReport status=SUCCESS method=CentralUser.ckycIdGeneretedReport()[pri:6, instance:CKYC.ICICI.CentralUser@57ac5227] output=Sat Jan 06 14:56:52 IST 2024 - CKYC ID Grnerate Report Test Start]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="reportCBSImportError()[pri:7, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:59:16 IST" name="reportCBSImportError" finished-at="2024-01-06T14:59:28 IST" duration-ms="12604" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating CBS Import Report]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reportCBSImportError -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:59:28 IST" name="getREsult" finished-at="2024-01-06T14:59:29 IST" duration-ms="255" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=reportCBSImportError status=SUCCESS method=CentralUser.reportCBSImportError()[pri:7, instance:CKYC.ICICI.CentralUser@57ac5227] output=Sat Jan 06 14:56:52 IST 2024 - Generating CBS Import Report]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="reportDraftSave()[pri:8, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:59:29 IST" name="reportDraftSave" finished-at="2024-01-06T14:59:34 IST" duration-ms="5754" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating Draft Save Report]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reportDraftSave -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:59:34 IST" name="getREsult" finished-at="2024-01-06T14:59:35 IST" duration-ms="283" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=reportDraftSave status=SUCCESS method=CentralUser.reportDraftSave()[pri:8, instance:CKYC.ICICI.CentralUser@57ac5227] output=Sat Jan 06 14:56:52 IST 2024 - Generating Draft Save Report]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="reportImageUploadPending()[pri:9, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:59:35 IST" name="reportImageUploadPending" finished-at="2024-01-06T14:59:40 IST" duration-ms="5204" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating Draft Save Report]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reportImageUploadPending -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:59:40 IST" name="getREsult" finished-at="2024-01-06T14:59:41 IST" duration-ms="917" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=reportImageUploadPending status=SUCCESS method=CentralUser.reportImageUploadPending()[pri:9, instance:CKYC.ICICI.CentralUser@57ac5227] output=Sat Jan 06 14:56:52 IST 2024 - Generating Draft Save Report]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="reportPendingCheckerApproval()[pri:10, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:59:41 IST" name="reportPendingCheckerApproval" finished-at="2024-01-06T14:59:44 IST" duration-ms="3531" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - GeneratingPending checker Approval Report]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reportPendingCheckerApproval -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:59:44 IST" name="getREsult" finished-at="2024-01-06T14:59:44 IST" duration-ms="232" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=reportPendingCheckerApproval status=SUCCESS method=CentralUser.reportPendingCheckerApproval()[pri:10, instance:CKYC.ICICI.CentralUser@57ac5227] output=Sat Jan 06 14:56:52 IST 2024 - GeneratingPending checker Approval Report]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="reportRejectedByChecker()[pri:11, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:59:44 IST" name="reportRejectedByChecker" finished-at="2024-01-06T14:59:49 IST" duration-ms="4464" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating Rejected By Checker Report]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reportRejectedByChecker -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:59:49 IST" name="getREsult" finished-at="2024-01-06T14:59:49 IST" duration-ms="221" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=reportRejectedByChecker status=SUCCESS method=CentralUser.reportRejectedByChecker()[pri:11, instance:CKYC.ICICI.CentralUser@57ac5227] output=Sat Jan 06 14:56:52 IST 2024 - Generating Rejected By Checker Report]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="reportApprovedByChecker()[pri:12, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:59:49 IST" name="reportApprovedByChecker" finished-at="2024-01-06T14:59:53 IST" duration-ms="4340" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating Approved By Checker Report]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reportApprovedByChecker -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:59:53 IST" name="getREsult" finished-at="2024-01-06T14:59:54 IST" duration-ms="635" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=reportApprovedByChecker status=SUCCESS method=CentralUser.reportApprovedByChecker()[pri:12, instance:CKYC.ICICI.CentralUser@57ac5227] output=Sat Jan 06 14:56:52 IST 2024 - Generating Approved By Checker Report]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="reportBulkFileGenerated()[pri:13, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T14:59:54 IST" name="reportBulkFileGenerated" finished-at="2024-01-06T15:00:04 IST" duration-ms="9938" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating Bulk File Generated Report]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reportBulkFileGenerated -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:00:04 IST" name="getREsult" finished-at="2024-01-06T15:00:05 IST" duration-ms="405" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=reportBulkFileGenerated status=SUCCESS method=CentralUser.reportBulkFileGenerated()[pri:13, instance:CKYC.ICICI.CentralUser@57ac5227] output=Sat Jan 06 14:56:52 IST 2024 - Generating Bulk File Generated Report]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="reportFiReconcilationPending()[pri:14, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:00:05 IST" name="reportFiReconcilationPending" finished-at="2024-01-06T15:00:11 IST" duration-ms="6162" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating FI Reconcilation Pending Report]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reportFiReconcilationPending -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:00:11 IST" name="getREsult" finished-at="2024-01-06T15:00:12 IST" duration-ms="1196" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=reportFiReconcilationPending status=SUCCESS method=CentralUser.reportFiReconcilationPending()[pri:14, instance:CKYC.ICICI.CentralUser@57ac5227] output=Sat Jan 06 14:56:52 IST 2024 - Generating FI Reconcilation Pending Report]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="reportUploadedToCkycPortal()[pri:15, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:00:12 IST" name="reportUploadedToCkycPortal" finished-at="2024-01-06T15:00:21 IST" duration-ms="9166" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.fail(Assert.java:115)
+at CKYC.ICICI.CentralUser.reportUploadedToCkycPortal(CentralUser.java:1113)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating Uploaded to CKYC Portal Report]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reportUploadedToCkycPortal -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:00:21 IST" name="getREsult" finished-at="2024-01-06T15:00:22 IST" duration-ms="743" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=reportUploadedToCkycPortal status=FAILURE method=CentralUser.reportUploadedToCkycPortal()[pri:15, instance:CKYC.ICICI.CentralUser@57ac5227] output=Sat Jan 06 14:56:52 IST 2024 - Generating Uploaded to CKYC Portal Report]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="reportCkycIdExisting()[pri:16, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:00:22 IST" name="reportCkycIdExisting" finished-at="2024-01-06T15:00:27 IST" duration-ms="4608" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating CKYC ID existing Report]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reportCkycIdExisting -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:00:27 IST" name="getREsult" finished-at="2024-01-06T15:00:27 IST" duration-ms="223" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=reportCkycIdExisting status=SUCCESS method=CentralUser.reportCkycIdExisting()[pri:16, instance:CKYC.ICICI.CentralUser@57ac5227] output=Sat Jan 06 14:56:52 IST 2024 - Generating CKYC ID existing Report]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="reportRjectedCkycPortal()[pri:17, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:00:27 IST" name="reportRjectedCkycPortal" finished-at="2024-01-06T15:00:33 IST" duration-ms="5666" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating  Rejected CKYC Portal Report]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reportRjectedCkycPortal -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:00:33 IST" name="getREsult" finished-at="2024-01-06T15:00:34 IST" duration-ms="1428" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=reportRjectedCkycPortal status=SUCCESS method=CentralUser.reportRjectedCkycPortal()[pri:17, instance:CKYC.ICICI.CentralUser@57ac5227] output=Sat Jan 06 14:56:52 IST 2024 - Generating  Rejected CKYC Portal Report]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="reportStageOneResponce()[pri:18, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:00:34 IST" name="reportStageOneResponce" finished-at="2024-01-06T15:00:38 IST" duration-ms="4273" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating  Stage One Responce Report]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reportStageOneResponce -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:00:38 IST" name="getREsult" finished-at="2024-01-06T15:00:39 IST" duration-ms="152" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=reportStageOneResponce status=SUCCESS method=CentralUser.reportStageOneResponce()[pri:18, instance:CKYC.ICICI.CentralUser@57ac5227] output=Sat Jan 06 14:56:52 IST 2024 - Generating  Stage One Responce Report]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="reportCkycIdGenerated()[pri:19, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:00:39 IST" name="reportCkycIdGenerated" finished-at="2024-01-06T15:00:42 IST" duration-ms="3445" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating  CKYC ID Generated Report]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reportCkycIdGenerated -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:00:42 IST" name="getREsult" finished-at="2024-01-06T15:00:42 IST" duration-ms="200" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=reportCkycIdGenerated status=SUCCESS method=CentralUser.reportCkycIdGenerated()[pri:19, instance:CKYC.ICICI.CentralUser@57ac5227] output=Sat Jan 06 14:56:52 IST 2024 - Generating  CKYC ID Generated Report]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="reportFiReconResponse()[pri:20, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:00:42 IST" name="reportFiReconResponse" finished-at="2024-01-06T15:00:47 IST" duration-ms="4895" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating  FI Recon Response Report]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reportFiReconResponse -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:00:47 IST" name="getREsult" finished-at="2024-01-06T15:00:48 IST" duration-ms="1128" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=reportFiReconResponse status=SUCCESS method=CentralUser.reportFiReconResponse()[pri:20, instance:CKYC.ICICI.CentralUser@57ac5227] output=Sat Jan 06 14:56:52 IST 2024 - Generating  FI Recon Response Report]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="reportCkycRecordSuccUpdated()[pri:21, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:00:48 IST" name="reportCkycRecordSuccUpdated" finished-at="2024-01-06T15:00:53 IST" duration-ms="4379" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Generating  CKYC ID Successfully Updated Report]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reportCkycRecordSuccUpdated -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:00:53 IST" name="getREsult" finished-at="2024-01-06T15:00:53 IST" duration-ms="265" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=reportCkycRecordSuccUpdated status=SUCCESS method=CentralUser.reportCkycRecordSuccUpdated()[pri:21, instance:CKYC.ICICI.CentralUser@57ac5227] output=Sat Jan 06 14:56:52 IST 2024 - Generating  CKYC ID Successfully Updated Report]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="custSearchDetailRecord()[pri:22, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:00:54 IST" name="custSearchDetailRecord" finished-at="2024-01-06T15:01:00 IST" duration-ms="6616" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- custSearchDetailRecord -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:01:00 IST" name="getREsult" finished-at="2024-01-06T15:01:01 IST" duration-ms="204" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=custSearchDetailRecord status=SUCCESS method=CentralUser.custSearchDetailRecord()[pri:22, instance:CKYC.ICICI.CentralUser@57ac5227] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="helpTab()[pri:23, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:01:01 IST" name="helpTab" finished-at="2024-01-06T15:01:07 IST" duration-ms="5936" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.fail(Assert.java:115)
+at CKYC.ICICI.CentralUser.helpTab(CentralUser.java:1690)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- helpTab -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.CentralUser@57ac5227]" started-at="2024-01-06T15:01:07 IST" name="getREsult" finished-at="2024-01-06T15:01:07 IST" duration-ms="161" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=helpTab status=FAILURE method=CentralUser.helpTab()[pri:23, instance:CKYC.ICICI.CentralUser@57ac5227] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+      </class> <!-- CKYC.ICICI.CentralUser -->
+      <class name="CKYC.ICICI.BaseClass">
+        <test-method is-config="true" signature="invokeBrowser()[pri:0, instance:CKYC.ICICI.BaseClass@4795ded0]" started-at="2024-01-06T14:56:54 IST" name="invokeBrowser" finished-at="2024-01-06T14:57:28 IST" duration-ms="33538" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Test Start]]>
+            </line>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Browser Open]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- invokeBrowser -->
+        <test-method is-config="true" signature="startReport()[pri:0, instance:CKYC.ICICI.BaseClass@4795ded0]" started-at="2024-01-06T14:57:28 IST" name="startReport" finished-at="2024-01-06T14:57:28 IST" duration-ms="403" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CKYC.ICICI.BaseClass@4795ded0]" started-at="2024-01-06T15:02:16 IST" name="tearDown" finished-at="2024-01-06T15:02:16 IST" duration-ms="78" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- CKYC.ICICI.BaseClass -->
+      <class name="CKYC.ICICI.AllSearch">
+        <test-method signature="makerUserLogin()[pri:-1, instance:CKYC.ICICI.AllSearch@e98770d]" started-at="2024-01-06T15:01:52 IST" name="makerUserLogin" finished-at="2024-01-06T15:01:56 IST" duration-ms="3983" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Maker User LoggedIn]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- makerUserLogin -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.AllSearch@e98770d]" started-at="2024-01-06T15:01:56 IST" name="getREsult" finished-at="2024-01-06T15:01:57 IST" duration-ms="104" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=makerUserLogin status=SUCCESS method=AllSearch.makerUserLogin()[pri:-1, instance:CKYC.ICICI.AllSearch@e98770d] output=Sat Jan 06 14:56:52 IST 2024 - Maker User LoggedIn]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="allSearchDownload()[pri:2, instance:CKYC.ICICI.AllSearch@e98770d]" started-at="2024-01-06T15:01:57 IST" name="allSearchDownload" finished-at="2024-01-06T15:02:16 IST" duration-ms="19551" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 -  Multi Search and Download Started]]>
+            </line>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Searching with Aadhar no]]>
+            </line>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Searching with PAN no]]>
+            </line>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Searching with VoterID]]>
+            </line>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Searching with PassportNO]]>
+            </line>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Searching with CKYCID]]>
+            </line>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Invalid Aadhaar Number]]>
+            </line>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Invalid PAN Number]]>
+            </line>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Invalid Passport Number]]>
+            </line>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Invalid CKYC Number]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- allSearchDownload -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.AllSearch@e98770d]" started-at="2024-01-06T15:02:16 IST" name="getREsult" finished-at="2024-01-06T15:02:16 IST" duration-ms="73" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=allSearchDownload status=SUCCESS method=AllSearch.allSearchDownload()[pri:2, instance:CKYC.ICICI.AllSearch@e98770d] output=Sat Jan 06 14:56:52 IST 2024 -  Multi Search and Download Started]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+      </class> <!-- CKYC.ICICI.AllSearch -->
+      <class name="CKYC.ICICI.MakerUser">
+        <test-method signature="makerUserLogin()[pri:0, instance:CKYC.ICICI.MakerUser@4ba302e0]" started-at="2024-01-06T15:01:07 IST" name="makerUserLogin" finished-at="2024-01-06T15:01:11 IST" duration-ms="4532" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Maker User LoggedIn]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- makerUserLogin -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.MakerUser@4ba302e0]" started-at="2024-01-06T15:01:11 IST" name="getREsult" finished-at="2024-01-06T15:01:11 IST" duration-ms="61" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=makerUserLogin status=SUCCESS method=MakerUser.makerUserLogin()[pri:0, instance:CKYC.ICICI.MakerUser@4ba302e0] output=Sat Jan 06 14:56:52 IST 2024 - Maker User LoggedIn]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="pendingCustomerDetails()[pri:1, instance:CKYC.ICICI.MakerUser@4ba302e0]" started-at="2024-01-06T15:01:11 IST" name="pendingCustomerDetails" finished-at="2024-01-06T15:01:15 IST" duration-ms="3780" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Checking Pending customer count]]>
+            </line>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Total 11 Pending customer found for makers Entry]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- pendingCustomerDetails -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.MakerUser@4ba302e0]" started-at="2024-01-06T15:01:15 IST" name="getREsult" finished-at="2024-01-06T15:01:15 IST" duration-ms="78" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=pendingCustomerDetails status=SUCCESS method=MakerUser.pendingCustomerDetails()[pri:1, instance:CKYC.ICICI.MakerUser@4ba302e0] output=Sat Jan 06 14:56:52 IST 2024 - Checking Pending customer count]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+        <test-method signature="pendingCustIsImgUpload()[pri:2, instance:CKYC.ICICI.MakerUser@4ba302e0]" started-at="2024-01-06T15:01:15 IST" name="pendingCustIsImgUpload" finished-at="2024-01-06T15:01:52 IST" duration-ms="36862" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Checking images for recent pending customer]]>
+            </line>
+            <line>
+              <![CDATA[Sat Jan 06 14:56:52 IST 2024 - Img not uploaded for select customer]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- pendingCustIsImgUpload -->
+        <test-method is-config="true" signature="getREsult(org.testng.ITestResult)[pri:0, instance:CKYC.ICICI.MakerUser@4ba302e0]" started-at="2024-01-06T15:01:52 IST" name="getREsult" finished-at="2024-01-06T15:01:52 IST" duration-ms="265" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=pendingCustIsImgUpload status=SUCCESS method=MakerUser.pendingCustIsImgUpload()[pri:2, instance:CKYC.ICICI.MakerUser@4ba302e0] output=Sat Jan 06 14:56:52 IST 2024 - Checking images for recent pending customer]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getREsult -->
+      </class> <!-- CKYC.ICICI.MakerUser -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -1,0 +1,487 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>25/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Jan 16 15:01:03 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>148 seconds (148587 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.reportUploadedToCkycPortal()'><b>reportUploadedToCkycPortal</b><br>Test class: CKYC.ICICI.CentralUser<br/>
+<a href="#Output-882658588" onClick='toggleBox("Output-882658588", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-882658588" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-882658588">
+Tue Jan 16 15:00:58 IST 2024 - Generating Uploaded to CKYC Portal Report<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: null
+	at CKYC.ICICI.CentralUser.reportUploadedToCkycPortal(CentralUser.java:1113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace882658588", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace882658588'><pre>java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.fail(Assert.java:115)
+	at CKYC.ICICI.CentralUser.reportUploadedToCkycPortal(CentralUser.java:1113)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>4</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.helpTab()'><b>helpTab</b><br>Test class: CKYC.ICICI.CentralUser</td>
+<td><div><pre>java.lang.AssertionError: null
+	at CKYC.ICICI.CentralUser.helpTab(CentralUser.java:1690)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1550899184", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1550899184'><pre>java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.fail(Assert.java:115)
+	at CKYC.ICICI.CentralUser.helpTab(CentralUser.java:1690)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>2</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.reportCkycRecordSuccUpdated()'><b>reportCkycRecordSuccUpdated</b><br>Test class: CKYC.ICICI.CentralUser<br/>
+<a href="#Output-1737750354" onClick='toggleBox("Output-1737750354", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1737750354" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1737750354">
+Tue Jan 16 15:00:58 IST 2024 - Generating  CKYC ID Successfully Updated Report<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.reportCkycIdGenerated()'><b>reportCkycIdGenerated</b><br>Test class: CKYC.ICICI.CentralUser<br/>
+<a href="#Output-1908455234" onClick='toggleBox("Output-1908455234", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1908455234" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1908455234">
+Tue Jan 16 15:00:58 IST 2024 - Generating  CKYC ID Generated Report<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.loginCentralUser()'><b>loginCentralUser</b><br>Test class: CKYC.ICICI.CentralUser<br/>
+<a href="#Output-520082748" onClick='toggleBox("Output-520082748", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-520082748" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-520082748">
+Tue Jan 16 15:00:58 IST 2024 - Central user logged in successfully<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.reportCkycIdExisting()'><b>reportCkycIdExisting</b><br>Test class: CKYC.ICICI.CentralUser<br/>
+<a href="#Output-104912388" onClick='toggleBox("Output-104912388", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-104912388" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-104912388">
+Tue Jan 16 15:00:58 IST 2024 - Generating CKYC ID existing Report<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.reportFiReconResponse()'><b>reportFiReconResponse</b><br>Test class: CKYC.ICICI.CentralUser<br/>
+<a href="#Output-2090593105" onClick='toggleBox("Output-2090593105", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2090593105" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2090593105">
+Tue Jan 16 15:00:58 IST 2024 - Generating  FI Recon Response Report<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.reportFiReconcilationPending()'><b>reportFiReconcilationPending</b><br>Test class: CKYC.ICICI.CentralUser<br/>
+<a href="#Output-309301028" onClick='toggleBox("Output-309301028", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-309301028" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-309301028">
+Tue Jan 16 15:00:58 IST 2024 - Generating FI Reconcilation Pending Report<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+<tr>
+<td title='CKYC.ICICI.AllSearch.allSearchDownload()'><b>allSearchDownload</b><br>Test class: CKYC.ICICI.AllSearch<br/>
+<a href="#Output-1347127045" onClick='toggleBox("Output-1347127045", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1347127045" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1347127045">
+Tue Jan 16 15:00:58 IST 2024 -  Multi Search and Download Started<br/>
+Tue Jan 16 15:00:58 IST 2024 - Searching with Aadhar no<br/>
+Tue Jan 16 15:00:58 IST 2024 - Searching with PAN no<br/>
+Tue Jan 16 15:00:58 IST 2024 - Searching with VoterID<br/>
+Tue Jan 16 15:00:58 IST 2024 - Searching with PassportNO<br/>
+Tue Jan 16 15:00:58 IST 2024 - Searching with CKYCID<br/>
+Tue Jan 16 15:00:58 IST 2024 - Invalid Aadhaar Number<br/>
+Tue Jan 16 15:00:58 IST 2024 - Invalid PAN Number<br/>
+Tue Jan 16 15:00:58 IST 2024 - Invalid Passport Number<br/>
+Tue Jan 16 15:00:58 IST 2024 - Invalid CKYC Number<br/>
+</div>
+</td>
+<td></td>
+<td>16</td>
+<td>CKYC.ICICI.AllSearch@68d6972f</td></tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.reportBulkFileGenerated()'><b>reportBulkFileGenerated</b><br>Test class: CKYC.ICICI.CentralUser<br/>
+<a href="#Output-214774813" onClick='toggleBox("Output-214774813", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-214774813" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-214774813">
+Tue Jan 16 15:00:58 IST 2024 - Generating Bulk File Generated Report<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.generateCkycBulkFile()'><b>generateCkycBulkFile</b><br>Test class: CKYC.ICICI.CentralUser<br/>
+<a href="#Output-48390515" onClick='toggleBox("Output-48390515", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-48390515" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-48390515">
+Tue Jan 16 15:00:58 IST 2024 - CKYC Bulk File Generate Test Started<br/>
+Tue Jan 16 15:00:58 IST 2024 - CKYC Bulk File export failed - No records to export.<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.reportDraftSave()'><b>reportDraftSave</b><br>Test class: CKYC.ICICI.CentralUser<br/>
+<a href="#Output-1843324431" onClick='toggleBox("Output-1843324431", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1843324431" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1843324431">
+Tue Jan 16 15:00:58 IST 2024 - Generating Draft Save Report<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+<tr>
+<td title='CKYC.ICICI.MakerUser.makerUserLogin()'><b>makerUserLogin</b><br>Test class: CKYC.ICICI.MakerUser<br/>
+<a href="#Output-855769947" onClick='toggleBox("Output-855769947", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-855769947" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-855769947">
+Tue Jan 16 15:00:58 IST 2024 - Maker User LoggedIn<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>CKYC.ICICI.MakerUser@63648ee9</td></tr>
+<tr>
+<td title='CKYC.ICICI.MakerUser.pendingCustomerDetails()'><b>pendingCustomerDetails</b><br>Test class: CKYC.ICICI.MakerUser<br/>
+<a href="#Output-2044082767" onClick='toggleBox("Output-2044082767", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2044082767" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2044082767">
+Tue Jan 16 15:00:58 IST 2024 - Checking Pending customer count<br/>
+Tue Jan 16 15:00:58 IST 2024 - Total 11 Pending customer found for makers Entry<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>CKYC.ICICI.MakerUser@63648ee9</td></tr>
+<tr>
+<td title='CKYC.ICICI.MakerUser.pendingCustIsImgUpload()'><b>pendingCustIsImgUpload</b><br>Test class: CKYC.ICICI.MakerUser<br/>
+<a href="#Output-454958850" onClick='toggleBox("Output-454958850", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-454958850" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-454958850">
+Tue Jan 16 15:00:58 IST 2024 - Checking images for recent pending customer<br/>
+Tue Jan 16 15:00:58 IST 2024 - Img not uploaded for select customer<br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>CKYC.ICICI.MakerUser@63648ee9</td></tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.reportPendingCheckerApproval()'><b>reportPendingCheckerApproval</b><br>Test class: CKYC.ICICI.CentralUser<br/>
+<a href="#Output-740735495" onClick='toggleBox("Output-740735495", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-740735495" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-740735495">
+Tue Jan 16 15:00:58 IST 2024 - GeneratingPending checker Approval Report<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+<tr>
+<td title='CKYC.ICICI.AllSearch.makerUserLogin()'><b>makerUserLogin</b><br>Test class: CKYC.ICICI.AllSearch<br/>
+<a href="#Output-1229511404" onClick='toggleBox("Output-1229511404", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1229511404" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1229511404">
+Tue Jan 16 15:00:58 IST 2024 - Maker User LoggedIn<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>CKYC.ICICI.AllSearch@68d6972f</td></tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.reportCBSImportError()'><b>reportCBSImportError</b><br>Test class: CKYC.ICICI.CentralUser<br/>
+<a href="#Output-1108730163" onClick='toggleBox("Output-1108730163", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1108730163" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1108730163">
+Tue Jan 16 15:00:58 IST 2024 - Generating CBS Import Report<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.custSearchDetailRecord()'><b>custSearchDetailRecord</b><br>Test class: CKYC.ICICI.CentralUser</td>
+<td></td>
+<td>4</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.uploadCkycResponce()'><b>uploadCkycResponce</b><br>Test class: CKYC.ICICI.CentralUser<br/>
+<a href="#Output-1729045606" onClick='toggleBox("Output-1729045606", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1729045606" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1729045606">
+Tue Jan 16 15:00:58 IST 2024 - CKYC Responce upload started<br/>
+Tue Jan 16 15:00:58 IST 2024 - Response File already exists. Upload new file.<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.reportRjectedCkycPortal()'><b>reportRjectedCkycPortal</b><br>Test class: CKYC.ICICI.CentralUser<br/>
+<a href="#Output-604480364" onClick='toggleBox("Output-604480364", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-604480364" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-604480364">
+Tue Jan 16 15:00:58 IST 2024 - Generating  Rejected CKYC Portal Report<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.reportImageUploadPending()'><b>reportImageUploadPending</b><br>Test class: CKYC.ICICI.CentralUser<br/>
+<a href="#Output-228904713" onClick='toggleBox("Output-228904713", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-228904713" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-228904713">
+Tue Jan 16 15:00:58 IST 2024 - Generating Draft Save Report<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.reportRejectedByChecker()'><b>reportRejectedByChecker</b><br>Test class: CKYC.ICICI.CentralUser<br/>
+<a href="#Output-713765818" onClick='toggleBox("Output-713765818", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-713765818" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-713765818">
+Tue Jan 16 15:00:58 IST 2024 - Generating Rejected By Checker Report<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.reportApprovedByChecker()'><b>reportApprovedByChecker</b><br>Test class: CKYC.ICICI.CentralUser<br/>
+<a href="#Output-705957093" onClick='toggleBox("Output-705957093", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-705957093" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-705957093">
+Tue Jan 16 15:00:58 IST 2024 - Generating Approved By Checker Report<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.uploadDumpFile()'><b>uploadDumpFile</b><br>Test class: CKYC.ICICI.CentralUser<br/>
+<a href="#Output-1977776214" onClick='toggleBox("Output-1977776214", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1977776214" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1977776214">
+Tue Jan 16 15:00:58 IST 2024 - Dump file upload started<br/>
+Tue Jan 16 15:00:58 IST 2024 - Dump File already exists. Upload new file.<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.reportStageOneResponce()'><b>reportStageOneResponce</b><br>Test class: CKYC.ICICI.CentralUser<br/>
+<a href="#Output-2027499247" onClick='toggleBox("Output-2027499247", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2027499247" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2027499247">
+Tue Jan 16 15:00:58 IST 2024 - Generating  Stage One Responce Report<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+<tr>
+<td title='CKYC.ICICI.CentralUser.ckycIdGeneretedReport()'><b>ckycIdGeneretedReport</b><br>Test class: CKYC.ICICI.CentralUser<br/>
+<a href="#Output-311487784" onClick='toggleBox("Output-311487784", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-311487784" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-311487784">
+Tue Jan 16 15:00:58 IST 2024 - CKYC ID Grnerate Report Test Start<br/>
+Tue Jan 16 15:00:58 IST 2024 - CKYC Generated ID End date should be greater than Start date<br/>
+Tue Jan 16 15:00:58 IST 2024 - CKYC Generated ID Please Enter To Created Date<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>CKYC.ICICI.CentralUser@2ed3b1f5</td></tr>
+</table><p>
+</body>
+</html>

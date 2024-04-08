@@ -1,0 +1,5 @@
+# Created at 2024-01-06T14:56:49.333
+Boot Manifest-JAR contains absolute paths in classpath 'D:\KiranG\CKYC Automation testing\PSB CKYC\CKYC_AutomationTesting\ICICI\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

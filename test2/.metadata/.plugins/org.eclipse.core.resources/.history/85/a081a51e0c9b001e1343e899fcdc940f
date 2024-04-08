@@ -1,0 +1,347 @@
+package CKYC.ICICI;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.UnexpectedAlertBehaviour;
+import org.openqa.selenium.UnhandledAlertException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import java.awt.AWTException;
+import java.awt.HeadlessException;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.List;
+import java.util.NoSuchElementException;
+
+import org.apache.logging.log4j.*;
+
+public class MakerUser extends BaseClass {
+	Logger log = LogManager.getLogger("MakerUser");
+	WebElement isErrorDisplay;
+
+	@Test(priority = 0, groups= {"LogIn Test"} )
+	public void makerUserLogin() throws HeadlessException, IOException, AWTException, InterruptedException {
+		
+
+		driver.get(pr.getProperty("URL"));
+		driver.findElement(By.xpath(pr.getProperty("CentralUserLoginId_loc")))
+				.sendKeys(pr.getProperty("MakerUserLoginId_val"));
+		driver.findElement(By.xpath(pr.getProperty("CentralUserLoginPass_loc")))
+				.sendKeys(pr.getProperty("MakerUserLoginPas_val"));
+		driver.findElement(By.xpath(pr.getProperty("CentralUserLoginBtn_loc"))).click();
+		WebElement redirectDrop = driver.findElement(By.xpath(pr.getProperty("CentralUserRedirectDrop_loc")));
+		Select selectRedirectDrop = new Select(redirectDrop);
+		selectRedirectDrop.selectByVisibleText(pr.getProperty("CentralUserLoginRedirectDropOpt_val"));
+		driver.findElement(By.xpath(pr.getProperty("CentralUserRedirectBtn_loc"))).click();
+		System.out.println(date + " - Maker loggedin");
+
+		log.info("Maker User LoggedIn");
+		Reporter.log(date + " - "+"Maker User LoggedIn");
+		Thread.sleep(500);
+		ss();
+
+	}
+
+	@Test(priority = 1)
+	public void pendingCustomerDetails() throws HeadlessException, IOException, AWTException, InterruptedException {
+		log.info("Checking Pending customer count");
+		Reporter.log(date + " - "+"Checking Pending customer count");
+		WebElement ckycManagment = driver.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementTab_loc")));
+		js.executeScript("arguments[0].click()", ckycManagment);
+		List<WebElement> ckycMangList = driver
+				.findElements(By.xpath(pr.getProperty("MakerUserCKYCManagementDropList_loc")));
+		for (WebElement x : ckycMangList) {
+			String dropText = x.getText();
+			if (dropText.equals("Pending Customer Details")) {
+				x.click();
+				break;
+			}
+		}
+
+		List<WebElement> pendingCustTableRow = driver
+				.findElements(By.xpath(pr.getProperty("MakerUserCKYCManagementTableRowList_loc")));
+		WebElement nextBtn = driver
+				.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementPendingCustNextPgArrow_loc")));
+		Boolean isNext = nextBtn.isDisplayed();
+
+		int sizeLi;
+		int count = 1;
+		for (int i = 0; i <= count; i++) {
+			if (isNext == true) {
+				nextBtn.click();
+				pendingCustTableRow.addAll(
+						driver.findElements(By.xpath(pr.getProperty("MakerUserCKYCManagementTableRowList_loc"))));
+
+				break;
+			}
+
+			count = count + 1;
+		}
+		sizeLi = pendingCustTableRow.size();
+		Boolean isListEmpty = pendingCustTableRow.isEmpty();
+		System.out.println(isListEmpty);
+		if (isListEmpty == true) {
+			log.info("No Pending Record Found For Maker Entry");
+			Reporter.log("No Pending Record Found For Maker Entry");
+		} else if (isListEmpty == false) {
+			log.info("Total " + sizeLi + " Pending customer found for makers Entry");
+			Reporter.log(date + " - "+"Total " + sizeLi + " Pending customer found for makers Entry");
+			System.out.println(date + " - Total " + sizeLi + " Pending customer found for makers Entry");
+		}
+
+		sizeLi = 0;
+		Thread.sleep(1000);
+		ss();
+
+	}
+
+	@Test(priority = 2)
+	public void pendingCustIsImgUpload() throws HeadlessException, IOException, AWTException, InterruptedException {
+		log.info("Checking images for recent pending customer");
+		Reporter.log(date + " - "+"Checking images for recent pending customer");
+		WebElement ckycManagment = driver.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementTab_loc")));
+		js.executeScript("arguments[0].click()", ckycManagment);
+		List<WebElement> ckycMangList = driver
+				.findElements(By.xpath(pr.getProperty("MakerUserCKYCManagementDropList_loc")));
+		for (WebElement x : ckycMangList) {
+			String dropText = x.getText();
+			if (dropText.equals("Pending Customer Details")) {
+				x.click();
+				break;
+			}
+		}
+
+		List<WebElement> pendingCustTableRow = driver
+				.findElements(By.xpath(pr.getProperty("MakerUserCKYCManagementTableRowList_loc")));
+		Boolean isListEmpty = pendingCustTableRow.isEmpty();
+		List<WebElement> editList = driver
+				.findElements(By.xpath(pr.getProperty("MakerUserCKYCManagementEditPendingCust_loc")));
+		for (WebElement x : editList) {
+			if (isListEmpty == false) {
+				x.click();
+				break;
+			}
+		}
+
+		List<WebElement> custImg = driver
+				.findElements(By.xpath(pr.getProperty("MakerUserCKYCManagementPendingCustImg_loc")));
+		Boolean isImgEmpty = custImg.isEmpty();
+		System.out.println(isImgEmpty);
+		if (isImgEmpty == false) {
+			log.info("Img uploaded for select customer");
+			Reporter.log(date + " - "+"Img uploaded for select customer");
+			System.out.println(date +" - Imag uploaded for select customer");
+		} else if (isImgEmpty == true) {
+			log.info("Img not uploaded for select customer");
+			Reporter.log(date + " - "+"Img not uploaded for select customer");
+			System.out.println(date + " - Img not uploaded for select customer");
+		}
+		Thread.sleep(1000);
+		ss();
+	}
+
+	@Test(priority = 3)
+	public void searchAndDownload() throws InterruptedException, HeadlessException, IOException, AWTException {
+
+		log.info("Search and Download Started");
+		Reporter.log(date + " - "+"Search and Download Started");
+		WebElement ckycManagment = driver.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementTab_loc")));
+		js.executeScript("arguments[0].click()", ckycManagment);
+		List<WebElement> ckycMangList = driver
+				.findElements(By.xpath(pr.getProperty("MakerUserCKYCManagementDropList_loc")));
+		for (WebElement x : ckycMangList) {
+			String dropText = x.getText();
+			if (dropText.contains("Search - Download")) {
+				x.click();
+				break;
+			}
+		}
+
+		String searchBy = pr.getProperty("MakerUserCKYCManagementSearchBy_val");
+		switch (searchBy) {
+		case "Aadhaar":
+			driver.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownAdhar_loc")))
+					.sendKeys(pr.getProperty("MakerUserCKYCManagementSearchByIdNo_val"));
+			log.info("Searching with Aadhar no");
+			Reporter.log(date + " - "+"Searching with Aadhar no");
+			driver.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownFinalSearchBtn_loc"))).click();
+			try {
+				Thread.sleep(1000);
+				isErrorDisplay = driver
+						.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownInputErrorAdhar_loc")));
+				if (isErrorDisplay.isDisplayed() == true) {
+					log.error(isErrorDisplay.getText());
+					Reporter.log(date + " - "+isErrorDisplay.getText());
+					System.out.println(isErrorDisplay.getText());
+
+				}
+			} catch (Exception e) {
+				System.out.println(date+" - No error element found");
+			}
+			break;
+
+		case "PAN":
+			driver.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownPan_loc")))
+					.sendKeys(pr.getProperty("MakerUserCKYCManagementSearchByIdNo_val"));
+			log.info("Searching with PAN no");
+			Reporter.log(date + " - "+"Searching with PAN no");
+			driver.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownFinalSearchBtn_loc"))).click();
+			try {
+				Thread.sleep(1000);
+				isErrorDisplay = driver
+						.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownInputErrorPAN_loc")));
+				if (isErrorDisplay.isDisplayed() == true) {
+					log.error(isErrorDisplay.getText());
+					Reporter.log(date + " - "+isErrorDisplay.getText());
+					System.out.println(date +" - "+ isErrorDisplay.getText());
+
+				}
+			} catch (Exception e) {
+				System.out.println(date + " - No error element found");
+			}
+			break;
+
+		case "VoterID":
+			driver.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownVoter_loc")))
+					.sendKeys(pr.getProperty("MakerUserCKYCManagementSearchByIdNo_val"));
+			log.info("Searching with VoterID");
+			Reporter.log(date + " - "+"Searching with VoterID");
+			driver.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownFinalSearchBtn_loc"))).click();
+			try {
+				Thread.sleep(1000);
+				isErrorDisplay = driver.findElement(
+						By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownInputErrorVoterId_loc")));
+				if (isErrorDisplay.isDisplayed() == true) {
+					log.error(isErrorDisplay.getText());
+					Reporter.log(date + " - "+isErrorDisplay.getText());
+					System.out.println(date +" - "+ isErrorDisplay.getText());
+
+				}
+			} catch (Exception e) {
+				System.out.println(date+" - No error element found");
+			}
+			break;
+
+		case "PassportNO":
+			driver.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownPassportNo_loc")))
+					.sendKeys(pr.getProperty("MakerUserCKYCManagementSearchByIdNo_val"));
+			log.info("Searching with PassportNO");
+			Reporter.log(date + " - "+"Searching with PassportNO");
+			driver.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownFinalSearchBtn_loc"))).click();
+			try {
+				Thread.sleep(1000);
+				isErrorDisplay = driver.findElement(
+						By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownInputErrorPassport_loc")));
+				if (isErrorDisplay.isDisplayed() == true) {
+					log.error(isErrorDisplay.getText());
+					Reporter.log(date + " - "+isErrorDisplay.getText());
+					System.out.println(date + isErrorDisplay.getText());
+
+				}
+			} catch (Exception e) {
+				System.out.println(date + " - No error element found");
+			}
+			break;
+
+		case "DrivingLicense":
+			driver.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownDirvLic_loc")))
+					.sendKeys(pr.getProperty("MakerUserCKYCManagementSearchByIdNo_val"));
+			log.info("Searching with DrivingLicense");
+			Reporter.log(date + " - "+"Searching with DrivingLicense");
+			driver.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownFinalSearchBtn_loc"))).click();
+			try {
+				Thread.sleep(1000);
+				isErrorDisplay = driver.findElement(
+						By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownInputErrorDrivingLic_loc")));
+				if (isErrorDisplay.isDisplayed() == true) {
+					log.error(isErrorDisplay.getText());
+					Reporter.log(date + " - "+isErrorDisplay.getText());
+					System.out.println(date +" - " +isErrorDisplay.getText());
+
+				}
+			} catch (Exception e) {
+				System.out.println(date +" - No error element found");
+			}
+			break;
+		case "CKYCID":
+			driver.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownCkycId_loc")))
+					.sendKeys(pr.getProperty("MakerUserCKYCManagementSearchByIdNo_val"));
+			log.info("Searching with CKYCID");
+			Reporter.log(date + " - "+"Searching with CKYCID");
+			driver.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownFinalSearchBtn_loc"))).click();
+			try {
+				Thread.sleep(1000);
+				isErrorDisplay = driver
+						.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownInputErrorCkyc_loc")));
+				if (isErrorDisplay.isDisplayed() == true) {
+					log.error(isErrorDisplay.getText());
+					Reporter.log(date + " - "+isErrorDisplay.getText());
+					System.out.println(date + isErrorDisplay.getText());
+
+				}
+			} catch (Exception e) {
+				System.out.println(date + " - No error element found");
+			}
+			break;
+
+		case "NREGA":
+			driver.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownNREGA_loc")))
+					.sendKeys(pr.getProperty("MakerUserCKYCManagementSearchByIdNo_val"));
+			log.info("Searching with NREGA");
+			Reporter.log(date + " - "+"Searching with NREGA");
+			driver.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownFinalSearchBtn_loc"))).click();
+			try {
+				Thread.sleep(1000);
+				isErrorDisplay = driver
+						.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownInputErrorNREGA_loc")));
+				if (isErrorDisplay.isDisplayed() == true) {
+					log.error(isErrorDisplay.getText());
+					Reporter.log(date + " - "+isErrorDisplay.getText());
+					System.out.println(date + isErrorDisplay.getText());
+					//System.out.println("Block 3");
+				}
+			} catch (Exception e) {
+				System.out.println(date + " - No error element found");
+			}
+			break;
+
+		}
+
+		try {
+
+			driver.findElement(By.xpath(pr.getProperty("MakerUserCKYCManagementSearchDownFinalSearchBtn_loc"))).click();
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
+			wait.until(ExpectedConditions.alertIsPresent());
+			Alert alert = driver.switchTo().alert();
+			String alertText = alert.getText();
+			log.error(alertText);
+			Reporter.log(date + " - "+alertText);
+			System.out.println(date + "Alert data: " + alertText);
+			Thread.sleep(500);
+			ss();
+			alert.accept();
+			Assert.fail("Test failed : An error occurred: There was no endpoint listening at http://192.168.100.101:9000/CkycApiService.svc");
+			
+
+		} catch (Exception e) {
+			System.out.println(date+" - No Alert Present");
+
+		}
+		System.out.println(date+" - End Search and Download Test");
+		
+		Thread.sleep(500);
+		ss();
+
+	}
+
+}

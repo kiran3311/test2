@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" strict="true">
+	<Appenders>
+		<Appender type="Console" name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+			<Layout type="PatternLayout" class="org.apache.log4j.PatternLayout"
+				pattern="%d{dd-mm-yyy HH:mm:ss.SSS} [%t]%-5level %logger{36} - %msg%n" />
+		</Appender>
+
+		<Appender type="File" name="file" fileName="D:\CKYC\temp\log\app.log" class="org.apache.log4j.ConsoleAppender">
+			<Layout type="PatternLayout" class="org.apache.log4j.PatternLayout"
+				pattern="%d{dd-mm-yyy HH:mm:ss.SSS} [%t]%-5level %logger{36} - %msg%n" />
+		</Appender>
+	</Appenders>
+
+
+	<Loggers>
+		<Root level="all">
+			<AppenderRef ref="file" />
+			<AppenderRef ref="STDOUT" />
+		</Root>
+	</Loggers>
+</Configuration>

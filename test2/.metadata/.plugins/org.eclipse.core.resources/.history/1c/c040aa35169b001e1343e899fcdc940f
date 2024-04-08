@@ -1,0 +1,110 @@
+package CKYC.ICICI;
+
+import java.awt.AWTException;
+import java.awt.HeadlessException;
+import java.awt.Rectangle;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.Properties;
+
+import javax.imageio.ImageIO;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.UnexpectedAlertBehaviour;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.Reporter;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
+
+public class BaseClass {
+	
+	Logger log = LogManager.getLogger("BaseClass");
+	public static java.util.Date date = new java.util.Date(); 
+	public static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+	public static  LocalDateTime now = LocalDateTime.now(); 
+	public static String resultTime = dtf.format(now);
+	
+
+	 public static  WebDriver driver;
+	public static Properties pr = new Properties();
+	FileReader fr;
+	public static  JavascriptExecutor js;
+
+	@BeforeSuite(groups= {"LogIn Test","New Dump Upload & Process"})
+	public void invokeBrowser() {
+		log.info("Test Start --------------------------------->>");
+
+		
+		log.info("Browser Open");
+		Reporter.log(resultTime + " - "+"Browser Open");
+
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		
+		try {
+			fr = new FileReader(System.getProperty("user.dir") + "\\src\\test\\java\\utilities\\config.properties");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		try {
+			pr.load(fr);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		js = (JavascriptExecutor)driver;
+		
+		
+	}
+	
+	
+	@AfterSuite(groups= {"LogIn Test","New Dump Upload & Process"})
+	public void closure() {
+		log.info("Browser closed");
+		Reporter.log(resultTime + " - "+"Browser closed");
+		driver.close();
+		log.info("Test End --------------------------------->>" + '\n');
+	}
+	
+	//@AfterMethod
+	public void takeScreenshot() throws IOException {
+		String out = new SimpleDateFormat("yyyy-MM-dd hh-mm-ss'.png'").format(new Date());
+		String nm = date.toString();
+		TakesScreenshot  screenshot = ((TakesScreenshot)driver);
+		File src = screenshot.getScreenshotAs(OutputType.FILE);
+		File dest = new File("D:\\KiranG\\ICICI Ckyc\\CKYC_AutomationTesting\\ICICI\\screenshot\\"+ "EndTest_ss"+out);
+		FileUtils.copyFile(src, dest);
+	}
+	
+	public static void ss() throws IOException, HeadlessException, AWTException {
+		String out = new SimpleDateFormat("yyyy-MM-dd hh-mm-ss'.png'").format(new Date());
+		BufferedImage image = new Robot().createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+	    ImageIO.write(image, "png", new File("D:\\KiranG\\ICICI Ckyc\\CKYC_AutomationTesting\\ICICI\\screenshot\\"+out));
+	}
+
+}

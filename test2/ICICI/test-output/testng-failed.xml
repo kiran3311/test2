@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="CKYC.ICICI.CentralUser">
+        <methods>
+          <include name="startReport"/>
+          <include name="reportUploadedToCkycPortal"/>
+          <include name="helpTab"/>
+          <include name="tearDown"/>
+          <include name="invokeBrowser"/>
+          <include name="getREsult"/>
+        </methods>
+      </class> <!-- CKYC.ICICI.CentralUser -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

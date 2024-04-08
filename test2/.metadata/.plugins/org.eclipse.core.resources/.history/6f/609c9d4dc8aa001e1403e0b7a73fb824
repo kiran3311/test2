@@ -1,0 +1,88 @@
+
+#Input Data-----------------------------------------------------------------------------------------------------------
+projectName = PSB
+URL = http://192.168.100.175:9999/Account/Login
+
+CentralUserLoginId_val =couser
+CentralUserLoginPass_val =Superadmin@123
+
+MakerUserLoginId_val = A19763
+MakerUserLoginPas_val = superadmin
+
+CentralUserLoginRedirectDropOpt_val =Individual
+
+CentralUserDumpFilePath_val = D:\\KiranG\\ICICI Ckyc\\Testing data\\Dump_file\\IN9655_MUM01_24112023_V1.2_IA018014_U00025.txt
+CentralUserCKYCResponseFile_val = D:\\KiranG\\ICICI Ckyc\\Testing data\\CKYC_ResponseFile\\IN1778_21092023_21.txt
+
+CKYCImageUploadExeFilePath_val = D:\\KiranG\\ICICI Ckyc\\ICICI_Patch_1_app_server\\ICICI_Patch_1_app_server\\ImageServiceExe\\ECKYCImageUpload.exe
+
+
+
+#CKYC Generated ID Report Data--------->
+# Select Start Date :
+CentralUserCKYCGeneratedIdReport_StartDateMonth_val= Aug
+CentralUserCKYCGeneratedIdReport_StartDateYear_val = 2023
+CentralUserCKYCGeneratedIdReport_StartDateDate_val = 15
+# Select End Date:
+CentralUserCKYCGeneratedIdReport_EndDateMonth_val = Dec
+CentralUserCKYCGeneratedIdReport_EndDateYear_val = 2023
+CentralUserCKYCGeneratedIdReport_EndDateDate_val = 1
+
+
+#Generate Pending Report Data--------->
+# Select Start Date:
+CentralUserGeneratePendingCustReportStartMonth_val = Jan
+CentralUserGeneratePendingCustReportStartYear_val = 2022
+CentralUserGeneratePendingCustReportStartDate_val = 11
+# Select End Date:
+CentralUserGeneratePendingCustReportEndMonth_val = Jul
+CentralUserGeneratePendingCustReportEndYear_val = 2022
+CentralUserGeneratePendingCustReportEndDate_val = 17
+
+
+!!!!!!!# Single Search and Download Data ------->
+
+#Options available to search are:{ Aadhaar / PAN / VoterID / PassportNO / CKYCID /  DrivingLicense / NREGA }
+MakerUserCKYCManagementSearchBy_val = Aadhaar
+
+#Enter ID no for selected serach By option
+MakerUserCKYCManagementSearchByIdNo_val = 32132dg133
+
+
+
+!!!!!!!!## Multi Search and Download Data ------------------->
+
+#Options available to search are:{ Aadhaar / PAN / VoterID / PassportNO / CKYCID / DrivingLicense / NREGA }
+
+!Enter field Name to search with 
+MultiSearchByField_val = Aadhaar/PAN/VoterID/PassportNO/CKYCID
+
+!Enter Adhar Number for multisearch
+SearchByAdharId_val =gjkgjk
+
+
+!Enter PAN Number for multisearch
+SearchByPanId_val = gkgk
+
+!Enter VoterID Number for multisearch
+SearchByVoterId_val = 65654
+
+!Enter Passport Number for multisearch
+SearchByPassportId_val = dgd1651
+
+!Enter CKYC ID for multisearch
+SearchByCkycId_val = dgj51564
+
+!Enter Driving license  Number for multisearch
+SearchByDrivingLicId_val = dg984et
+
+!Enter NREGA Number for multisearch
+SearchByNREGA_val = rt745#
+
+
+#Other Report Data
+author_val = Kiran Gangurde
+
+#Search customer detail record
+CustomerId_val =3213321321321
+

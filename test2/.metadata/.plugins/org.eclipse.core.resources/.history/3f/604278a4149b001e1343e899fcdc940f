@@ -1,0 +1,352 @@
+package CKYC.ICICI;
+
+import java.awt.AWTException;
+import java.awt.HeadlessException;
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+import org.apache.logging.log4j.*;
+
+public class CentralUser extends BaseClass {
+	Logger log = LogManager.getLogger("CentralUser");
+	
+
+// Login to the central user
+	@Test(priority = -1, groups= {"LogIn Test","New Dump Upload & Process"})
+	public void loginCentralUser() throws InterruptedException, IOException, HeadlessException, AWTException {
+
+		driver.get(pr.getProperty("URL"));
+		driver.findElement(By.xpath(pr.getProperty("CentralUserLoginId_loc")))
+				.sendKeys(pr.getProperty("CentralUserLoginId_val"));
+		driver.findElement(By.xpath(pr.getProperty("CentralUserLoginPass_loc")))
+				.sendKeys(pr.getProperty("CentralUserLoginPass_val"));
+		driver.findElement(By.xpath(pr.getProperty("CentralUserLoginBtn_loc"))).click();
+		WebElement redirectDrop = driver.findElement(By.xpath(pr.getProperty("CentralUserRedirectDrop_loc")));
+		Select selectRedirectDrop = new Select(redirectDrop);
+		selectRedirectDrop.selectByVisibleText(pr.getProperty("CentralUserLoginRedirectDropOpt_val"));
+		driver.findElement(By.xpath(pr.getProperty("CentralUserRedirectBtn_loc"))).click();
+		log.info("Central user logged in successfully");
+		Reporter.log(resultTime + " - "+"Central user logged in successfully");
+		System.out.println("Central Loggedin");
+		Thread.sleep(500);
+		ss();
+
+	}
+
+//Upload New Dump File -->
+	@Test(priority = 2, groups= {"New Dump Upload & Process"})
+	public void uploadDumpFile() throws InterruptedException, IOException, HeadlessException, AWTException {
+		WebElement importTab = driver.findElement(By.xpath(pr.getProperty("CentralUserImportTab_loc")));
+		js.executeScript("arguments[0].click();", importTab);
+		// Actions importHover = new Actions(driver);
+		// importHover.moveToElement(importTab);
+
+		List<WebElement> importOpt = driver.findElements(By.xpath(pr.getProperty("CentralUserImportDropOPt_loc")));
+		for (WebElement x : importOpt) {
+			String dropText = x.getText();
+			if (dropText.equals("CBS Customer Dump")) {
+				x.click();
+				break;
+			}
+
+		}
+
+		driver.findElement(By.xpath(pr.getProperty("CentralUserCBSDumpFileUploadBtn_loc"))).click();
+		Thread.sleep(1000);
+		log.info("Dump file upload started");
+		Reporter.log(resultTime + " - "+"Dump file upload started");
+		WebElement fileInput = driver.findElement(By.xpath(pr.getProperty("CentralUserSelectDumpFileBtn_loc")));
+		fileInput.sendKeys(pr.getProperty("CentralUserDumpFilePath_val"));
+		Thread.sleep(1000);
+		driver.findElement(By.xpath(pr.getProperty("CentralUserCBSDumpFileFinalUploadBtn_loc"))).click();
+
+		Thread.sleep(1000);
+		String alertMsg = null;
+
+		if (driver.switchTo().alert().getText() != null) {
+			System.out.println(driver.switchTo().alert().getText());
+			alertMsg = driver.switchTo().alert().getText();
+
+			// System.out.println("entered in block");
+			if (alertMsg.equals("File successfully uploaded.")) {
+				log.info("Dump " + alertMsg);
+				Reporter.log(resultTime + " - "+"Dump " + alertMsg);
+			} else {
+				log.error("Dump " + alertMsg);
+				Reporter.log(resultTime + " - "+"Dump " + alertMsg);
+			}
+			Thread.sleep(2000);
+			ss();
+			driver.switchTo().alert().accept();
+
+		}
+	}
+	
+	//Run Image Service .exe file
+	@Test(priority = 3, groups= {"New Dump Upload & Process"})
+	public void runImageService() throws HeadlessException, IOException, AWTException {
+		log.info("Image Upload Service exe file executed");
+		Reporter.log(resultTime + " - "+"Image Upload Service exe file executed");
+		Runtime.getRuntime().exec("D:\\KiranG\\ICICI Ckyc\\ICICI_Patch_1_app_server\\ICICI_Patch_1_app_server\\ImageServiceExe\\ECKYCImageUpload.exe");
+		System.out.println("Image service executed");
+		
+		ss();
+	}
+
+	// Generate Bulk File
+	@Test(priority = 4, groups= {""} )
+	public void generateCkycBulkFile() throws InterruptedException, IOException, HeadlessException, AWTException {
+		log.info("CKYC Bulk File Generate Test Started.");
+		Reporter.log(resultTime + " - "+"CKYC Bulk File Generate Test Started");
+		WebElement exportTab = driver.findElement(By.xpath(pr.getProperty("CentralUserExportTab_loc")));
+		js.executeScript("arguments[0].click()", exportTab);
+		List<WebElement> exportDropOpt = driver.findElements(By.xpath(pr.getProperty("CentralUserExportDropOpt_loc")));
+		for (WebElement x : exportDropOpt) {
+			String dropText = x.getText();
+			if (dropText.equals("CKYC Bulk File")) {
+				x.click();
+				break;
+			}
+		}
+		driver.findElement(By.xpath(pr.getProperty("CentralUserGenerateCKYCBulkViewRecordBtn_loc"))).click();
+		driver.findElement(By.xpath(pr.getProperty("CentralUserGenerateBulkBtn_loc"))).click();
+
+		Thread.sleep(1000);
+		if (driver.switchTo().alert().getText() != null) {
+			String alertText = driver.switchTo().alert().getText();
+			System.out.println("CKYC Bulk File --> " + alertText);
+			log.info("CKYC Bulk " + alertText);
+			Reporter.log(resultTime + " - "+"CKYC Bulk " + alertText);
+			Thread.sleep(2000);
+			ss();
+			driver.switchTo().alert().accept();
+		}
+
+	}
+
+// Upload CKYC Response file
+	@Test(priority = 5)
+	public void uploadCkycResponce() throws InterruptedException, IOException, HeadlessException, AWTException {
+		log.info("CKYC Responce upload started");
+		Reporter.log(resultTime + " - "+"CKYC Responce upload started");
+		WebElement imporTab = driver.findElement(By.xpath(pr.getProperty("CentralUserImportTab_loc")));
+		js.executeScript("arguments[0].click()", imporTab);
+		List<WebElement> importDropOpt = driver.findElements(By.xpath(pr.getProperty("CentralUserImportDropOPt_loc")));
+		for (WebElement x : importDropOpt) {
+			String dropText = x.getText();
+			if (dropText.equals("CKYC Response")) {
+				x.click();
+				break;
+			}
+		}
+		Thread.sleep(1000);
+		driver.findElement(By.xpath(pr.getProperty("CentralUserCKYCResponseUploadImportBtn_loc"))).click();
+		WebElement ckycReponseFile = driver
+				.findElement(By.xpath(pr.getProperty("CentralUserCKYCResponseFileSelectBtn_loc")));
+		ckycReponseFile.sendKeys(pr.getProperty("CentralUserCKYCResponseFile_val"));
+		driver.findElement(By.xpath(pr.getProperty("CentralUserCKYCResponseFileFinalUploadBtn_loc"))).click();
+
+		String alertMsg = null;
+		Thread.sleep(1000);
+		if (driver.switchTo().alert().getText() != null) {
+			alertMsg = driver.switchTo().alert().getText();
+			System.out.println("enter in respons alert block");
+			System.out.println(alertMsg);
+			log.info("Response " + alertMsg);
+			Reporter.log(resultTime + " - "+"Response " + alertMsg);
+			Thread.sleep(2000);
+			ss();
+			driver.switchTo().alert().accept();
+		}
+	}
+
+// CKYC ID generated Report
+
+	@Test(priority = 6)
+	public void ckycIdGeneretedReport() throws InterruptedException, IOException, HeadlessException, AWTException {
+		log.info("CKYC ID Grnerate Report Test Start");
+		Reporter.log(resultTime + " - "+"CKYC ID Grnerate Report Test Start");
+		WebElement exportTab = driver.findElement(By.xpath(pr.getProperty("CentralUserExportTab_loc")));
+		js.executeScript("arguments[0].click()", exportTab);
+		List<WebElement> exportDroplist = driver.findElements(By.xpath(pr.getProperty("CentralUserExportDropOpt_loc")));
+		for (WebElement x : exportDroplist) {
+			String dropText = x.getText();
+			if (dropText.equals("CKYC ID Generated")) {
+				x.click();
+				break;
+			}
+
+		}
+
+//Start Date Picker---->
+
+		// Pick month
+		WebElement startDate = driver
+				.findElement(By.xpath(pr.getProperty("CentralUserCKYCIdGeneratedReportStartDate_loc")));
+		startDate.click();
+		Thread.sleep(1000);
+		WebElement month = driver
+				.findElement(By.xpath(pr.getProperty("CentralUserCKYCIdGenerateReportMonthSelect_loc")));
+		Select monthSelect = new Select(month);
+		monthSelect.selectByVisibleText(pr.getProperty("CentralUserCKYCGeneratedIdReport_StartDateMonth_val"));
+
+		// Pick year
+		WebElement year = driver.findElement(By.xpath(pr.getProperty("CentralUserCKYCIdGenerateReportYearSelect_loc")));
+		Select yearSelect = new Select(year);
+		yearSelect.selectByVisibleText(pr.getProperty("CentralUserCKYCGeneratedIdReport_StartDateYear_val"));
+
+		// Pick Date
+		List<WebElement> dates = driver
+				.findElements(By.xpath(pr.getProperty("CentralUserCKYCIdGenerateReportTotalDates_loc")));
+		for (WebElement x : dates) {
+			String dateText = x.getText();
+			if (dateText.equals(pr.getProperty("CentralUserCKYCGeneratedIdReport_StartDateDate_val"))) {
+				x.click();
+				
+				break;
+			}
+		}
+		Thread.sleep(1000);
+		
+		
+		// End Date picker
+
+		// Pick month
+		WebElement endDate = driver
+				.findElement(By.xpath(pr.getProperty("CentralUserCKYCIdGeneratedReportEndDate_loc")));
+		endDate.click();
+		Thread.sleep(1000);
+		WebElement endMonth = driver
+				.findElement(By.xpath(pr.getProperty("CentralUserCKYCIdGenerateReportEndMonthSelect_loc")));
+		Select endMonthSelect = new Select(endMonth);
+		endMonthSelect.selectByVisibleText(pr.getProperty("CentralUserCKYCGeneratedIdReport_EndDateMonth_val"));
+
+		// Pick year
+		WebElement endYear = driver
+				.findElement(By.xpath(pr.getProperty("CentralUserCKYCIdGenerateReportEndYearSelect_loc")));
+		Select endYearSelect = new Select(endYear);
+		endYearSelect.selectByVisibleText(pr.getProperty("CentralUserCKYCGeneratedIdReport_EndDateYear_val"));
+
+		// Pick Date
+		List<WebElement> endDates = driver
+				.findElements(By.xpath(pr.getProperty("CentralUserCKYCIdGenerateReportEndTotalDates_loc")));
+		for (WebElement x : endDates) {
+			String dateText = x.getText();
+			if (dateText.equals(pr.getProperty("CentralUserCKYCGeneratedIdReport_EndDateDate_val"))) {
+				x.click();
+				
+				break;
+			}
+		}
+		Thread.sleep(1000);
+		driver.findElement(By.xpath(pr.getProperty("CentralUserCkycGenerateReportGenerateBtn_loc"))).click();
+
+		Thread.sleep(1000);
+		if (driver.switchTo().alert().getText() != null) {
+			String alertText = driver.switchTo().alert().getText();
+			System.out.println("CKYC Generated ID " + alertText);
+			log.info("CKYC Generated ID " + alertText);
+			Reporter.log(resultTime + " - "+"CKYC Generated ID " + alertText);
+
+			Thread.sleep(2000);
+			ss();
+			driver.switchTo().alert().accept();
+		}
+
+	}
+
+//Generate Pending Customer Report
+	@Test(priority = 7)
+	public void gerneratePendingCustomerReport()
+			throws InterruptedException, IOException, HeadlessException, AWTException {
+		log.info("Generating pending customer Report");
+		Reporter.log(resultTime + " - "+"Generating pending customer Report");
+		WebElement reportTab = driver.findElement(By.xpath(pr.getProperty("CentralUserReportTab_loc")));
+		js.executeScript("arguments[0].click()", reportTab);
+		List<WebElement> reportTabOptions = driver
+				.findElements(By.xpath(pr.getProperty("CentralUserReportDropOpts_loc")));
+		for (WebElement x : reportTabOptions) {
+			String dropText = x.getText();
+			if (dropText.equals("Pending Customer Report")) {
+				x.click();
+				break;
+			}
+		}
+
+		Thread.sleep(1000);
+		// Start Date picker
+		driver.findElement(By.xpath(pr.getProperty("CentralUserReportGeneratePendingCustReportStartDate_loc"))).click();
+		;
+		WebElement selectStartDateMonth = driver
+				.findElement(By.xpath(pr.getProperty("CentralUserReportGeneratePendingCustReportStartDateMonth_loc")));
+		Select optStartDateMonth = new Select(selectStartDateMonth);
+		optStartDateMonth.selectByVisibleText(pr.getProperty("CentralUserGeneratePendingCustReportStartMonth_val"));
+		WebElement selectStartDateYear = driver
+				.findElement(By.xpath(pr.getProperty("CentralUserReportGeneratePendingCustReportStartDateYear_loc")));
+		Select optStartDateYear = new Select(selectStartDateYear);
+		optStartDateYear.selectByVisibleText(pr.getProperty("CentralUserGeneratePendingCustReportStartYear_val"));
+		List<WebElement> startDates = driver.findElements(
+				By.xpath(pr.getProperty("CentralUserReportGeneratePendingCustReportStartDateTotalDates_loc")));
+		for (WebElement x : startDates) {
+			String dateText = x.getText();
+			if (dateText.equals(pr.getProperty("CentralUserGeneratePendingCustReportStartDate_val"))) {
+				x.click();
+				break;
+			}
+		}
+
+		// End Date picker
+
+		driver.findElement(By.xpath(pr.getProperty("CentralUserReportGeneratePendingCustReportEndDate_loc"))).click();
+
+		WebElement selectEndDateMonth = driver
+				.findElement(By.xpath(pr.getProperty("CentralUserReportGeneratePendingCustReportEndDateMonth_loc")));
+		Select optEndDateMonth = new Select(selectEndDateMonth);
+		//////////////////////////////
+	
+		optEndDateMonth.selectByVisibleText(pr.getProperty("CentralUserGeneratePendingCustReportEndMonth_val"));
+		
+		//////////////////////////////
+		WebElement selectEndDateYear = driver
+				.findElement(By.xpath(pr.getProperty("CentralUserReportGeneratePendingCustReportEndDateYear_loc")));
+		Select optEndDateYear = new Select(selectEndDateYear);
+		optEndDateYear.selectByVisibleText(pr.getProperty("CentralUserGeneratePendingCustReportEndYear_val"));
+		List<WebElement> endDates = driver.findElements(
+				By.xpath(pr.getProperty("CentralUserReportGeneratePendingCustReportEndDateTotalDates_loc")));
+		for (WebElement x : endDates) {
+			String dateText = x.getText();
+			if (dateText.equals(pr.getProperty("CentralUserGeneratePendingCustReportEndDate_val"))) {
+				x.click();
+				break;
+			}
+		}
+
+		driver.findElement(By.xpath(pr.getProperty("CentralUserReportGeneratePendingcustReportGenerateBtn_loc")))
+				.click();
+
+		if (driver.switchTo().alert().getText() != null) {
+			String alertText = driver.switchTo().alert().getText();
+			System.out.println("Pending Customer Report : " + alertText);
+			log.info("Pending Customer Report : " + alertText);
+			Reporter.log(resultTime + " - "+"Pending Customer Report : " + alertText);
+			Thread.sleep(2000);
+			ss();
+			driver.switchTo().alert().accept();
+			Reporter.log(alertText);
+		}
+
+	}
+
+}
